@@ -175,8 +175,8 @@ export default function Rooms() {
       acOption: "Premium AC Suite",
       description: "Our finest accommodation featuring wooden ceiling accents, an elegant seating lounge, and superior fittings.",
       images: [
-        "/images/rooms/deluxe/5.webp",
         "/images/rooms/deluxe/6.webp",
+        "/images/rooms/deluxe/5.webp",
         "/images/rooms/deluxe/3.webp"
       ],
       badge: "Premium Stay",
