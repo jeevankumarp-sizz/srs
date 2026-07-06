@@ -70,19 +70,23 @@ button, .btn {
   border-bottom: 1px solid rgba(139, 94, 60, 0.08);
 }
 
-/* Custom Scrollbar */
+/* Custom Glassmorphic Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--background);
+  background: rgba(252, 250, 247, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--accent-gold);
-  border-radius: 4px;
+  background: rgba(200, 155, 94, 0.5);
+  border: 2.5px solid #FCFAF7;
+  border-radius: 9999px;
+  transition: background 0.3s ease;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--primary);
+  background: rgba(139, 94, 60, 0.85);
 }
 
 /* Lenis Smooth Scroll Support */

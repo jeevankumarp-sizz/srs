@@ -38,7 +38,7 @@ export default function Hero() {
           animate={{ scale: 1 }}
           transition={{ duration: 10, ease: "easeOut" }}
           style={{ backgroundImage: "url('/images/home/Home Section.webp')" }}
-          className="w-full h-full bg-cover bg-center"
+          className="w-full h-full bg-cover bg-[center_32%]"
         />
       </div>
 

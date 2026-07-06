@@ -1,10 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import { useBooking } from "@/context/BookingContext";
-import { Bed, Tv, Snowflake, Wifi, Maximize, MessageSquare, Shield } from "lucide-react";
-import { motion } from "framer-motion";
-
+import { Bed, Tv, Snowflake, Wifi, Maximize, MessageSquare, Shield, ChevronLeft, ChevronRight } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import React from "react";
 
 interface Room {
@@ -13,10 +13,90 @@ interface Room {
   price: string;
   priceDesc: string;
   description: string;
-  image: string;
+  images: string[];
   amenities: { icon: React.ComponentType<{ size?: number; className?: string }>; name: string }[];
   badge?: string;
   acOption?: string;
+}
+
+function RoomImageCarousel({ images, title }: { images: string[]; title: string }) {
+  const [current, setCurrent] = useState(0);
+
+  const nextSlide = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+
+  const prevSlide = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
+  if (!images || images.length === 0) return null;
+
+  return (
+    <div className="relative w-full h-full overflow-hidden group">
+      {/* Slide Container */}
+      <AnimatePresence initial={false} mode="wait">
+        <motion.div
+          key={current}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
+          className="absolute inset-0"
+        >
+          <Image
+            src={images[current]}
+            alt={`${title} - View ${current + 1}`}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover"
+            priority={current === 0}
+          />
+        </motion.div>
+      </AnimatePresence>
+
+      {/* Glassmorphic Arrows */}
+      {images.length > 1 && (
+        <>
+          <button
+            onClick={prevSlide}
+            className="absolute left-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full flex items-center justify-center bg-white/20 backdrop-blur-md border border-white/25 text-[#FCFAF7] hover:bg-white/40 active:scale-95 transition-all duration-300 opacity-100 sm:opacity-0 group-hover:opacity-100 cursor-pointer shadow-sm z-10"
+            aria-label="Previous image"
+          >
+            <ChevronLeft size={16} />
+          </button>
+          <button
+            onClick={nextSlide}
+            className="absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full flex items-center justify-center bg-white/20 backdrop-blur-md border border-white/25 text-[#FCFAF7] hover:bg-white/40 active:scale-95 transition-all duration-300 opacity-100 sm:opacity-0 group-hover:opacity-100 cursor-pointer shadow-sm z-10"
+            aria-label="Next image"
+          >
+            <ChevronRight size={16} />
+          </button>
+        </>
+      )}
+
+      {/* Glassmorphic Dot Indicators */}
+      {images.length > 1 && (
+        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 px-2.5 py-1.5 rounded-full bg-[#FCFAF7]/15 backdrop-blur-md border border-white/10 z-10">
+          {images.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={(e) => {
+                e.stopPropagation();
+                setCurrent(idx);
+              }}
+              className={`w-1.5 h-1.5 rounded-full transition-all duration-300 cursor-pointer ${
+                idx === current ? "bg-accent-gold scale-125 w-3" : "bg-[#FCFAF7]/50 hover:bg-[#FCFAF7]/80"
+              }`}
+              aria-label={`Go to slide ${idx + 1}`}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
 }
 
 export default function Rooms() {
@@ -30,7 +110,13 @@ export default function Rooms() {
       priceDesc: "per night",
       acOption: "AC & Non-AC Available",
       description: "A cozy and neat room with essential comforts, ideal for budget-conscious solo travelers and couples.",
-      image: "/images/rooms/standard/1.webp",
+      images: [
+        "/images/rooms/standard/1.webp",
+        "/images/rooms/standard/2.webp",
+        "/images/rooms/standard/3.webp",
+        "/images/rooms/standard/4.webp",
+        "/images/rooms/standard/5.webp"
+      ],
       badge: "Best Value",
       amenities: [
         { icon: Bed, name: "Double Bed" },
@@ -46,7 +132,14 @@ export default function Rooms() {
       priceDesc: "per night",
       acOption: "Air Conditioned (AC)",
       description: "Spacious room with modern interiors, warm lighting, study desk, and premium bedding for business & leisure.",
-      image: "/images/rooms/deluxe/1.webp",
+      images: [
+        "/images/rooms/deluxe/1.webp",
+        "/images/rooms/deluxe/2.webp",
+        "/images/rooms/deluxe/3.webp",
+        "/images/rooms/deluxe/4.webp",
+        "/images/rooms/deluxe/5.webp",
+        "/images/rooms/deluxe/6.webp"
+      ],
       badge: "Popular",
       amenities: [
         { icon: Bed, name: "Queen Bed" },
@@ -62,7 +155,10 @@ export default function Rooms() {
       priceDesc: "per night",
       acOption: "AC & Non-AC Options",
       description: "Designed for families, offering multiple beds, generous layout, and bright ventilation for a homelike stay.",
-      image: "/images/rooms/family/1.webp",
+      images: [
+        "/images/rooms/family/1.webp",
+        "/images/rooms/family/2.webp"
+      ],
       badge: "Family Favorite",
       amenities: [
         { icon: Bed, name: "Multiple Beds" },
@@ -78,7 +174,11 @@ export default function Rooms() {
       priceDesc: "per night",
       acOption: "Premium AC Suite",
       description: "Our finest accommodation featuring wooden ceiling accents, an elegant seating lounge, and superior fittings.",
-      image: "/images/rooms/deluxe/5.webp", // Premium photo from Deluxe folder
+      images: [
+        "/images/rooms/deluxe/5.webp",
+        "/images/rooms/deluxe/6.webp",
+        "/images/rooms/deluxe/3.webp"
+      ],
       badge: "Premium Stay",
       amenities: [
         { icon: Bed, name: "King Bed" },
@@ -94,7 +194,11 @@ export default function Rooms() {
       priceDesc: "per person / night",
       acOption: "Air Conditioned (AC)",
       description: "Clean, air-conditioned shared dormitory beds with personal lockers. Ideal for tourist groups and pilgrims.",
-      image: "/images/rooms/standard/4.webp", // Spacious room photo
+      images: [
+        "/images/rooms/standard/4.webp",
+        "/images/rooms/standard/5.webp",
+        "/images/rooms/standard/2.webp"
+      ],
       badge: "Group Friendly",
       amenities: [
         { icon: Bed, name: "Single Bed" },
@@ -131,24 +235,19 @@ export default function Rooms() {
               className="group bg-white rounded-3xl border border-primary/5 hover:border-primary/10 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between"
             >
               
-              {/* Room Card Image */}
+              {/* Room Card Image Carousel */}
               <div>
                 <div className="relative aspect-[16/10] overflow-hidden bg-[#2B2B2B]/10">
-                  <Image
-                    src={room.image}
-                    alt={room.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
+                  <RoomImageCarousel images={room.images} title={room.title} />
+                  
                   {/* Badge */}
                   {room.badge && (
-                    <span className="absolute top-4 left-4 bg-primary text-white text-[10px] font-poppins uppercase tracking-wider font-bold px-3 py-1.5 rounded-full shadow-sm">
+                    <span className="absolute top-4 left-4 bg-primary text-white text-[10px] font-poppins uppercase tracking-wider font-bold px-3 py-1.5 rounded-full shadow-sm z-10">
                       {room.badge}
                     </span>
                   )}
                   {/* AC/Non-AC Label */}
-                  <span className="absolute bottom-4 right-4 bg-[#FCFAF7]/95 backdrop-blur-md text-[#2B2B2B] text-xs font-semibold px-3 py-1.5 rounded-xl border border-white/20 shadow-sm">
+                  <span className="absolute bottom-4 right-4 bg-[#FCFAF7]/95 backdrop-blur-md text-[#2B2B2B] text-xs font-semibold px-3 py-1.5 rounded-xl border border-white/20 shadow-sm z-10">
                     {room.acOption}
                   </span>
                 </div>

@@ -4,6 +4,7 @@ import "./globals.css";
 import { Toaster } from "sonner";
 import { BookingProvider } from "@/context/BookingContext";
 import SmoothScroll from "@/components/SmoothScroll";
+import ScrollProgress from "@/components/ScrollProgress";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -57,6 +58,7 @@ export default function RootLayout({
         className={`${playfair.variable} ${manrope.variable} ${poppins.variable} font-manrope antialiased bg-background text-foreground pb-[76px] md:pb-0`}
       >
         <BookingProvider>
+          <ScrollProgress />
           <SmoothScroll>
             {children}
           </SmoothScroll>

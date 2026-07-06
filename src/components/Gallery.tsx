@@ -18,9 +18,25 @@ export default function Gallery() {
   const images: GalleryImage[] = [
     { src: "/images/gallery/sangam-residency-sagar-sagara-lodging-services-uyqjdkqybo.jpg", category: "exterior", alt: "Sangam Residency Exterior Day View" },
     { src: "/images/gallery/sangam-residency-sagar-sagara-lodging-services-ohazdqy9jt.jpg", category: "exterior", alt: "Sangam Residency Main Signage and Entrance" },
-    { src: "/images/gallery/sangam-residency-sagar-sagara-lodging-services-0rzrf83yfo.jpg", category: "lobby", alt: "Spacious Elevator and Corridor Lobby" },
     { src: "/images/gallery/sangam-residency-sagar-sagara-lodging-services-gc23ss1xs7.jpg", category: "reception", alt: "Modern Reception Front Desk" },
     
+    // Room Folder Images
+    { src: "/images/rooms/standard/1.webp", category: "rooms", alt: "Standard Room - Clean Double Bed Setup" },
+    { src: "/images/rooms/standard/2.webp", category: "rooms", alt: "Standard Room - Desk and Wardrobe" },
+    { src: "/images/rooms/standard/3.webp", category: "rooms", alt: "Standard Room - Ambient Room Space" },
+    { src: "/images/rooms/standard/4.webp", category: "rooms", alt: "Standard Dormitory Style Layout" },
+    { src: "/images/rooms/standard/5.webp", category: "rooms", alt: "Standard Room - Bathroom and Wash Area" },
+    
+    { src: "/images/rooms/deluxe/1.webp", category: "rooms", alt: "Deluxe AC Room - Elegant Queen Bed" },
+    { src: "/images/rooms/deluxe/2.webp", category: "rooms", alt: "Deluxe Room - Ambient Bedside Lighting" },
+    { src: "/images/rooms/deluxe/3.webp", category: "rooms", alt: "Deluxe Room - Seating Area and Flat TV" },
+    { src: "/images/rooms/deluxe/4.webp", category: "rooms", alt: "Deluxe Room - Bathroom Fitted with Modern Geyser" },
+    { src: "/images/rooms/deluxe/5.webp", category: "rooms", alt: "Executive Suite Room - Wooden Ceiling Accent" },
+    { src: "/images/rooms/deluxe/6.webp", category: "rooms", alt: "Deluxe Room - Large Glass Window View" },
+
+    { src: "/images/rooms/family/1.webp", category: "rooms", alt: "Family Suite Room - Multiple Bed Layout" },
+    { src: "/images/rooms/family/2.webp", category: "rooms", alt: "Family Room - Cozy Wooden Headboard Bedding" },
+
     { src: "/images/gallery/1.jpg", category: "reception", alt: "Cozy Front Office Desk Area" },
     { src: "/images/gallery/2.webp", category: "rooms", alt: "Comfortable Twin Beds Room Layout" },
     { src: "/images/gallery/3.webp", category: "rooms", alt: "Deluxe AC Bedside Setup" },
