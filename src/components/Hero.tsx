@@ -155,16 +155,16 @@ export default function Hero() {
                     onClick={() => openBooking()}
                     className="w-full px-4 py-3.5 rounded-2xl border border-primary/20 bg-white/60 focus:outline-none font-manrope text-sm text-[#2B2B2B] cursor-pointer text-left appearance-none bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%238B5E3C%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m6%209%206%206%206-6%22%2F%3E%3C%2Fsvg%3E')] bg-[length:1.1rem] bg-[right_1rem_center] bg-no-repeat"
                   >
-                    1 Guest
+                    2 Guests
                   </button>
                 </div>
                 <div>
                   <label className="block text-xs font-semibold uppercase tracking-wider text-[#2B2B2B]/70 font-poppins mb-1.5">Room Type</label>
                   <button
                     onClick={() => openBooking()}
-                    className="w-full px-4 py-3.5 rounded-2xl border border-primary/20 bg-white/60 focus:outline-none font-manrope text-sm text-[#2B2B2B] cursor-pointer text-left appearance-none bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%238B5E3C%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m6%209%206%206%206-6%22%2F%3E%3C%2Fsvg%3E')] bg-[length:1.1rem] bg-[right_1rem_center] bg-no-repeat"
+                    className="w-full px-4 py-3.5 rounded-2xl border border-primary/20 bg-white/60 focus:outline-none font-manrope text-sm text-[#2B2B2B] cursor-pointer text-left appearance-none bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%238B5E3C%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m6%209%206%206%206-6%22%2F%3E%3C%2Fsvg%3E')] bg-[length:1.1rem] bg-[right_1rem_center] bg-no-repeat truncate pr-8"
                   >
-                    Standard Room
+                    AC / Non AC Deluxe
                   </button>
                 </div>
               </div>

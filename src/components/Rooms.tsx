@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { useBooking } from "@/context/BookingContext";
-import { Bed, Tv, Snowflake, Wifi, Maximize, MessageSquare, Shield, ChevronLeft, ChevronRight } from "lucide-react";
+import { Bed, Tv, Snowflake, Wifi, Maximize, MessageSquare, Shield, ChevronLeft, ChevronRight, Users, PlusCircle, Wind } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import React from "react";
 
@@ -12,6 +12,7 @@ interface Room {
   title: string;
   price: string;
   priceDesc: string;
+  capacity: string;
   description: string;
   images: string[];
   amenities: { icon: React.ComponentType<{ size?: number; className?: string }>; name: string }[];
@@ -104,107 +105,104 @@ export default function Rooms() {
 
   const roomsData: Room[] = [
     {
-      id: "standard",
-      title: "Standard Room",
-      price: "₹1,200 – ₹1,500",
+      id: "non-ac-deluxe",
+      title: "Non AC Deluxe Room",
+      price: "₹1,499",
       priceDesc: "per night",
-      acOption: "AC & Non-AC Available",
-      description: "A cozy and neat room with essential comforts, ideal for budget-conscious solo travelers and couples.",
+      capacity: "2 Guests",
+      acOption: "Non-AC Deluxe",
+      description: "Clean, airy and well-ventilated deluxe accommodation with plush double bed, ambient lighting, work desk, and 24-hour hot water.",
       images: [
-        "/images/rooms/standard/1.webp",
-        "/images/rooms/standard/2.webp",
-        "/images/rooms/standard/3.webp",
-        "/images/rooms/standard/4.webp",
-        "/images/rooms/standard/5.webp"
+        "/images/rooms/non-ac-deluxe/1_result.webp",
+        "/images/rooms/non-ac-deluxe/2_result.webp",
+        "/images/rooms/non-ac-deluxe/3_result.webp",
+        "/images/rooms/non-ac-deluxe/4_result.webp",
+        "/images/rooms/non-ac-deluxe/5_result.webp",
+        "/images/rooms/non-ac-deluxe/6_result.webp",
       ],
       badge: "Best Value",
       amenities: [
+        { icon: Users, name: "2 Guests Capacity" },
         { icon: Bed, name: "Double Bed" },
-        { icon: Wifi, name: "Free WiFi" },
+        { icon: Wind, name: "Ceiling Fan & Airy" },
+        { icon: Wifi, name: "Free High-Speed WiFi" },
         { icon: Tv, name: "LED TV" },
         { icon: Shield, name: "24h Hot Water" },
       ],
     },
     {
-      id: "deluxe",
-      title: "Deluxe Room",
-      price: "₹2,000",
+      id: "ac-deluxe",
+      title: "AC Deluxe Room",
+      price: "₹1,999",
       priceDesc: "per night",
+      capacity: "2 Guests",
       acOption: "Air Conditioned (AC)",
-      description: "Spacious room with modern interiors, warm lighting, study desk, and premium bedding for business & leisure.",
+      description: "Modern air-conditioned room crafted with warm lighting, superior mattress, study desk, and pristine attached bath.",
       images: [
-        "/images/rooms/deluxe/1.webp",
-        "/images/rooms/deluxe/2.webp",
-        "/images/rooms/deluxe/3.webp",
-        "/images/rooms/deluxe/4.webp",
-        "/images/rooms/deluxe/5.webp",
-        "/images/rooms/deluxe/6.webp"
+        "/images/rooms/ac-deluxe/1_result.webp",
+        "/images/rooms/ac-deluxe/2_result.webp",
+        "/images/rooms/ac-deluxe/3_result.webp",
+        "/images/rooms/ac-deluxe/4_result.webp",
+        "/images/rooms/ac-deluxe/5_result.webp",
+        "/images/rooms/ac-deluxe/6_result.webp",
+        "/images/rooms/ac-deluxe/7_result.webp",
       ],
-      badge: "Popular",
+      badge: "Most Popular",
       amenities: [
-        { icon: Bed, name: "Queen Bed" },
-        { icon: Snowflake, name: "Split AC" },
-        { icon: Wifi, name: "Free WiFi" },
-        { icon: Tv, name: "Smart TV" },
+        { icon: Users, name: "2 Guests Capacity" },
+        { icon: Snowflake, name: "Split Air Conditioning" },
+        { icon: Bed, name: "Queen/Double Bed" },
+        { icon: Wifi, name: "Free High-Speed WiFi" },
+        { icon: Tv, name: "LED TV" },
+        { icon: Shield, name: "24h Hot Water" },
       ],
     },
     {
-      id: "family",
-      title: "Family Room",
-      price: "₹2,500 – ₹3,200",
+      id: "executive-suite",
+      title: "Executive Suite Room",
+      price: "₹3,999",
       priceDesc: "per night",
-      acOption: "AC & Non-AC Options",
-      description: "Designed for families, offering multiple beds, generous layout, and bright ventilation for a homelike stay.",
-      images: [
-        "/images/rooms/family/1.webp",
-        "/images/rooms/family/2.webp"
-      ],
-      badge: "Family Favorite",
-      amenities: [
-        { icon: Bed, name: "Multiple Beds" },
-        { icon: Maximize, name: "Extra Spacious" },
-        { icon: Wifi, name: "Free WiFi" },
-        { icon: Tv, name: "Cable TV" },
-      ],
-    },
-    {
-      id: "suite",
-      title: "Executive Suite",
-      price: "₹4,000",
-      priceDesc: "per night",
+      capacity: "6 Guests",
       acOption: "Premium AC Suite",
-      description: "Our finest accommodation featuring wooden ceiling accents, an elegant seating lounge, and superior fittings.",
+      description: "Expansive luxury suite ideal for large families or groups of 6, featuring wooden ceiling accents, ample space, and premium comfort.",
       images: [
-        "/images/rooms/deluxe/5.webp",
-        "/images/rooms/deluxe/6.webp",
-        "/images/rooms/deluxe/3.webp"
+        "/images/rooms/executive-suite/1_result.webp",
+        "/images/rooms/executive-suite/2_result.webp",
       ],
-      badge: "Premium Stay",
+      badge: "Family & Group Suite",
       amenities: [
-        { icon: Bed, name: "King Bed" },
-        { icon: Snowflake, name: "Premium AC" },
-        { icon: Maximize, name: "Lounge Area" },
-        { icon: Tv, name: "50\" Smart TV" },
+        { icon: Users, name: "6 Guests Capacity" },
+        { icon: Snowflake, name: "Split AC Cooling" },
+        { icon: Bed, name: "Multiple Beds Setup" },
+        { icon: Maximize, name: "Spacious Living Area" },
+        { icon: Wifi, name: "Free High-Speed WiFi" },
+        { icon: Tv, name: "Smart LED TV" },
       ],
     },
     {
       id: "dormitory",
       title: "Spacious Dormitory",
-      price: "₹500",
+      price: "₹499",
       priceDesc: "per person / night",
+      capacity: "10–15 Guests",
       acOption: "Air Conditioned (AC)",
-      description: "Clean, air-conditioned shared dormitory beds with personal lockers. Ideal for tourist groups and pilgrims.",
+      description: "Clean, air-conditioned shared dormitory with comfortable individual beds and dedicated lockers. Perfect for tour groups and pilgrims.",
       images: [
-        "/images/rooms/standard/4.webp",
-        "/images/rooms/standard/5.webp",
-        "/images/rooms/standard/2.webp"
+        "/images/rooms/dormitory/1_result.webp",
+        "/images/rooms/dormitory/2_result.webp",
+        "/images/rooms/dormitory/3_result.webp",
+        "/images/rooms/dormitory/4_result.webp",
+        "/images/rooms/dormitory/5_result.webp",
+        "/images/rooms/dormitory/6_result.webp",
       ],
       badge: "Group Friendly",
       amenities: [
-        { icon: Bed, name: "Single Bed" },
+        { icon: Users, name: "10–15 Guests Capacity" },
         { icon: Snowflake, name: "AC Maintained" },
-        { icon: Wifi, name: "Free WiFi" },
-        { icon: Shield, name: "Lockers" },
+        { icon: Bed, name: "Individual Clean Beds" },
+        { icon: Wifi, name: "Free High-Speed WiFi" },
+        { icon: Shield, name: "24h Hot Water" },
+        { icon: Maximize, name: "Luggage Space" },
       ],
     },
   ];
@@ -214,7 +212,7 @@ export default function Rooms() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="text-primary text-xs font-semibold uppercase tracking-wider font-poppins">Refined Lodging</span>
           <h2 className="text-3xl sm:text-4xl font-bold font-playfair text-[#2B2B2B] mt-2">Our Room Categories</h2>
           <p className="text-sm text-[#2B2B2B]/75 mt-2 font-manrope">
@@ -223,8 +221,27 @@ export default function Rooms() {
           <div className="w-12 h-[2px] bg-accent-gold mx-auto mt-4" />
         </div>
 
+        {/* Extra Bed Highlight Banner */}
+        <div className="mb-12 max-w-2xl mx-auto">
+          <div className="glass-card rounded-2xl p-4 sm:p-5 border border-primary/20 bg-white/80 shadow-sm flex items-center justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                <PlusCircle size={22} />
+              </div>
+              <div>
+                <span className="block text-sm font-bold text-[#2B2B2B] font-poppins">Extra Bed Facility</span>
+                <span className="block text-xs text-[#2B2B2B]/70 font-manrope">Travelling with additional members? Extra comfortable bed available for any room.</span>
+              </div>
+            </div>
+            <div className="text-right shrink-0">
+              <span className="block text-base font-extrabold text-primary font-manrope">₹499</span>
+              <span className="block text-[11px] text-[#2B2B2B]/60 font-medium">per bed</span>
+            </div>
+          </div>
+        </div>
+
         {/* Rooms Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {roomsData.map((room, index) => (
             <motion.div
               key={room.id}
@@ -232,7 +249,7 @@ export default function Rooms() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group bg-white rounded-3xl border border-primary/5 hover:border-primary/10 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between"
+              className="group bg-white rounded-3xl border border-primary/10 hover:border-primary/20 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between"
             >
               
               {/* Room Card Image Carousel */}
@@ -258,10 +275,13 @@ export default function Rooms() {
                     <h3 className="text-2xl font-bold font-playfair text-[#2B2B2B] group-hover:text-primary transition-colors">
                       {room.title}
                     </h3>
+                    <span className="text-xs font-semibold text-primary bg-primary/10 px-2.5 py-1 rounded-full shrink-0 font-poppins">
+                      {room.capacity}
+                    </span>
                   </div>
 
                   <div className="flex items-baseline gap-1.5 mb-4">
-                    <span className="text-2xl font-bold text-primary font-manrope">{room.price}</span>
+                    <span className="text-3xl font-extrabold text-primary font-manrope">{room.price}</span>
                     <span className="text-xs text-[#2B2B2B]/60 font-medium font-manrope">{room.priceDesc}</span>
                   </div>
 
@@ -284,11 +304,15 @@ export default function Rooms() {
                 </div>
               </div>
 
-              {/* Action Button */}
-              <div className="p-6 pt-0 mt-4">
+              {/* Action Button & Extra Bed hint */}
+              <div className="p-6 pt-0 mt-2 space-y-3">
+                <div className="text-[11px] text-[#2B2B2B]/60 font-manrope flex items-center justify-between bg-secondary/50 px-3 py-1.5 rounded-lg">
+                  <span>Need an extra bed?</span>
+                  <span className="font-semibold text-primary font-poppins">+₹499 / bed</span>
+                </div>
                 <button
                   onClick={() => openBooking(room.title)}
-                  className="w-full bg-primary hover:bg-primary/95 text-white font-poppins font-semibold py-3 px-4 rounded-2xl transition-all shadow-md shadow-primary/5 hover:shadow-lg hover:shadow-primary/10 flex items-center justify-center gap-2 cursor-pointer group-hover:scale-[1.01] active:scale-[0.99]"
+                  className="w-full bg-primary hover:bg-primary/95 text-white font-poppins font-semibold py-3.5 px-4 rounded-2xl transition-all shadow-md shadow-primary/5 hover:shadow-lg hover:shadow-primary/10 flex items-center justify-center gap-2 cursor-pointer group-hover:scale-[1.01] active:scale-[0.99]"
                 >
                   <MessageSquare size={16} className="fill-current" />
                   <span>Book on WhatsApp</span>

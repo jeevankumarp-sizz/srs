@@ -3,7 +3,6 @@
 import {
   Snowflake,
   Wind,
-  Users,
   Crown,
   Bed,
   Sparkles,
@@ -12,7 +11,8 @@ import {
   Bell,
   Flame,
   Clock,
-  Key
+  Key,
+  PlusCircle,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -37,9 +37,9 @@ export default function Amenities() {
       desc: "Bright, airy rooms with powerful ceiling fans and ample cross ventilation.",
     },
     {
-      icon: Users,
-      title: "Family Rooms",
-      desc: "Multi-bed spacious configurations, perfect for traveling with children.",
+      icon: PlusCircle,
+      title: "Extra Bed Facility",
+      desc: "Additional comfortable bed provided on request at ₹499/bed across all rooms.",
     },
     {
       icon: Crown,

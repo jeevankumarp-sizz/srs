@@ -16,42 +16,45 @@ export default function Gallery() {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   const images: GalleryImage[] = [
-    { src: "/images/gallery/sangam-residency-sagar-sagara-lodging-services-uyqjdkqybo.jpg", category: "exterior", alt: "Sangam Residency Exterior Day View" },
-    { src: "/images/gallery/sangam-residency-sagar-sagara-lodging-services-ohazdqy9jt.jpg", category: "exterior", alt: "Sangam Residency Main Signage and Entrance" },
-    { src: "/images/gallery/sangam-residency-sagar-sagara-lodging-services-gc23ss1xs7.jpg", category: "reception", alt: "Modern Reception Front Desk" },
-    
-    // Room Folder Images
-    { src: "/images/rooms/standard/1.webp", category: "rooms", alt: "Standard Room - Clean Double Bed Setup" },
-    { src: "/images/rooms/standard/2.webp", category: "rooms", alt: "Standard Room - Desk and Wardrobe" },
-    { src: "/images/rooms/standard/3.webp", category: "rooms", alt: "Standard Room - Ambient Room Space" },
-    { src: "/images/rooms/standard/4.webp", category: "rooms", alt: "Standard Dormitory Style Layout" },
-    { src: "/images/rooms/standard/5.webp", category: "rooms", alt: "Standard Room - Bathroom and Wash Area" },
-    
-    { src: "/images/rooms/deluxe/1.webp", category: "rooms", alt: "Deluxe AC Room - Elegant Queen Bed" },
-    { src: "/images/rooms/deluxe/2.webp", category: "rooms", alt: "Deluxe Room - Ambient Bedside Lighting" },
-    { src: "/images/rooms/deluxe/3.webp", category: "rooms", alt: "Deluxe Room - Seating Area and Flat TV" },
-    { src: "/images/rooms/deluxe/4.webp", category: "rooms", alt: "Deluxe Room - Bathroom Fitted with Modern Geyser" },
-    { src: "/images/rooms/deluxe/5.webp", category: "rooms", alt: "Executive Suite Room - Wooden Ceiling Accent" },
-    { src: "/images/rooms/deluxe/6.webp", category: "rooms", alt: "Deluxe Room - Large Glass Window View" },
+    // Exterior & Facade
+    { src: "/images/home/Home Section.webp", category: "exterior", alt: "Sangam Residency Hotel Exterior View" },
+    { src: "/images/gallery/18_result.webp", category: "exterior", alt: "Sangam Residency Property View" },
 
-    { src: "/images/rooms/family/1.webp", category: "rooms", alt: "Family Suite Room - Multiple Bed Layout" },
-    { src: "/images/rooms/family/2.webp", category: "rooms", alt: "Family Room - Cozy Wooden Headboard Bedding" },
+    // Reception & Front Office
+    { src: "/images/gallery/1_result.webp", category: "reception", alt: "Reception Front Desk" },
+    { src: "/images/gallery/14_result.webp", category: "reception", alt: "Front Office & Billing Desk" },
+    { src: "/images/gallery/17_result.webp", category: "reception", alt: "Warm Reception Welcome Area" },
 
-    { src: "/images/gallery/1.jpg", category: "reception", alt: "Cozy Front Office Desk Area" },
-    { src: "/images/gallery/2.webp", category: "rooms", alt: "Comfortable Twin Beds Room Layout" },
-    { src: "/images/gallery/3.webp", category: "rooms", alt: "Deluxe AC Bedside Setup" },
-    { src: "/images/gallery/4.webp", category: "rooms", alt: "Clean Spacious Room Wardrobe" },
-    { src: "/images/gallery/5.webp", category: "rooms", alt: "Double Bed Room Cozy Lighting" },
-    { src: "/images/gallery/6.webp", category: "corridors", alt: "Wide Main Corridor Passage" },
-    { src: "/images/gallery/7.webp", category: "corridors", alt: "Clean Well-Lit Hotel Corridor" },
-    { src: "/images/gallery/8.webp", category: "partyhall", alt: "Spacious Party Hall Seating View" },
-    { src: "/images/gallery/9.jpg", category: "partyhall", alt: "Modern Function Hall Banquet Stage" },
-    
-    { src: "/images/gallery/10.jpg", category: "rooms", alt: "Elegant Bed Linen Detail" },
-    { src: "/images/gallery/11.jpg", category: "lobby", alt: "Beautiful Wooden Accent Lobby Ceiling" },
-    { src: "/images/gallery/12.jpg", category: "corridors", alt: "Elevator Lobby Entrance View" },
-    { src: "/images/gallery/unnamed.jpg", category: "reception", alt: "Warm Ambient Reception Seating" },
-    { src: "/images/gallery/unnamed.webp", category: "lobby", alt: "Hotel Entrance Lobby Lounge" },
+    // Lobby & Common Areas
+    { src: "/images/gallery/11_result.webp", category: "lobby", alt: "Lobby Wooden Accent Ceiling" },
+    { src: "/images/gallery/12_result.webp", category: "lobby", alt: "Spacious Elevator and Main Lobby" },
+    { src: "/images/gallery/13_result.webp", category: "lobby", alt: "Lobby Passageway & Waiting Area" },
+
+    // Rooms (Deluxe AC, Non-AC, Executive Suite, Dormitory)
+    { src: "/images/rooms/ac-deluxe/1_result.webp", category: "rooms", alt: "AC Deluxe Room - Queen Bed Setup" },
+    { src: "/images/rooms/ac-deluxe/2_result.webp", category: "rooms", alt: "AC Deluxe Room - Ambient Lighting & Desk" },
+    { src: "/images/rooms/non-ac-deluxe/1_result.webp", category: "rooms", alt: "Non AC Deluxe Room - Double Bed" },
+    { src: "/images/rooms/non-ac-deluxe/2_result.webp", category: "rooms", alt: "Non AC Deluxe Room - Bright Interiors" },
+    { src: "/images/rooms/executive-suite/1_result.webp", category: "rooms", alt: "Executive Suite Room - Multiple Beds & Lounge" },
+    { src: "/images/rooms/executive-suite/2_result.webp", category: "rooms", alt: "Executive Suite Room - Wooden Ceiling Accent" },
+    { src: "/images/rooms/dormitory/1_result.webp", category: "rooms", alt: "Dormitory - Group AC Stay" },
+    { src: "/images/rooms/dormitory/2_result.webp", category: "rooms", alt: "Dormitory - Individual Clean Beds" },
+    { src: "/images/gallery/2_result.webp", category: "rooms", alt: "Comfortable Bedroom Setup" },
+    { src: "/images/gallery/3_result.webp", category: "rooms", alt: "Clean Guest Room Bedding" },
+    { src: "/images/gallery/04_result.webp", category: "rooms", alt: "Room Interiors & Furniture" },
+    { src: "/images/gallery/10_result.webp", category: "rooms", alt: "Crisp Clean Bed Linen Detail" },
+    { src: "/images/gallery/15_result.webp", category: "rooms", alt: "Cozy Room Ambience" },
+
+    // Corridors & Walkways
+    { src: "/images/gallery/05_result.webp", category: "corridors", alt: "Floor Lobby and Walkway" },
+    { src: "/images/gallery/06_result.webp", category: "corridors", alt: "Wide Main Corridor Passage" },
+    { src: "/images/gallery/07_result.webp", category: "corridors", alt: "Clean Well-Lit Hotel Corridor" },
+    { src: "/images/gallery/16_result.webp", category: "corridors", alt: "Guest Floor Corridor Walkway" },
+    { src: "/images/gallery/19_result.webp", category: "corridors", alt: "Spotless Floor Passage" },
+
+    // Party Hall & Banquets
+    { src: "/images/gallery/08_result.webp", category: "partyhall", alt: "Spacious Party Hall Seating View" },
+    { src: "/images/gallery/09_result.webp", category: "partyhall", alt: "Modern Function Hall Banquet Stage" },
   ];
 
   const categories = [
