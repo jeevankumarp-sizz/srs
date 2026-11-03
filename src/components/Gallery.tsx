@@ -22,13 +22,11 @@ export default function Gallery() {
 
     // Reception & Front Office
     { src: "/images/gallery/1_result.webp", category: "reception", alt: "Reception Front Desk" },
-    { src: "/images/gallery/14_result.webp", category: "reception", alt: "Front Office & Billing Desk" },
-    { src: "/images/gallery/17_result.webp", category: "reception", alt: "Warm Reception Welcome Area" },
+    { src: "/images/gallery/17_result.webp", category: "reception", alt: "Front Desk & Welcome Area" },
 
-    // Lobby & Common Areas
+    // Lobby & Lounge (Strictly lounge and seating, no lift photos)
     { src: "/images/gallery/11_result.webp", category: "lobby", alt: "Lobby Wooden Accent Ceiling" },
-    { src: "/images/gallery/12_result.webp", category: "lobby", alt: "Spacious Elevator and Main Lobby" },
-    { src: "/images/gallery/13_result.webp", category: "lobby", alt: "Lobby Passageway & Waiting Area" },
+    { src: "/images/about.jpg", category: "lobby", alt: "Hotel Lobby Seating & Ambient Lounge" },
 
     // Rooms (Deluxe AC, Non-AC, Executive Suite, Dormitory)
     { src: "/images/rooms/ac-deluxe/1_result.webp", category: "rooms", alt: "AC Deluxe Room - Queen Bed Setup" },
@@ -39,18 +37,21 @@ export default function Gallery() {
     { src: "/images/rooms/executive-suite/2_result.webp", category: "rooms", alt: "Executive Suite Room - Wooden Ceiling Accent" },
     { src: "/images/rooms/dormitory/1_result.webp", category: "rooms", alt: "Dormitory - Group AC Stay" },
     { src: "/images/rooms/dormitory/2_result.webp", category: "rooms", alt: "Dormitory - Individual Clean Beds" },
-    { src: "/images/gallery/2_result.webp", category: "rooms", alt: "Comfortable Bedroom Setup" },
     { src: "/images/gallery/3_result.webp", category: "rooms", alt: "Clean Guest Room Bedding" },
     { src: "/images/gallery/04_result.webp", category: "rooms", alt: "Room Interiors & Furniture" },
+    { src: "/images/gallery/05_result.webp", category: "rooms", alt: "Spacious Room Layout & Wardrobe" },
     { src: "/images/gallery/10_result.webp", category: "rooms", alt: "Crisp Clean Bed Linen Detail" },
     { src: "/images/gallery/15_result.webp", category: "rooms", alt: "Cozy Room Ambience" },
 
-    // Corridors & Walkways
-    { src: "/images/gallery/05_result.webp", category: "corridors", alt: "Floor Lobby and Walkway" },
+    // Corridors & Lifts / Elevators (All lift and corridor photos grouped here)
+    { src: "/images/gallery/12_result.webp", category: "corridors", alt: "Modern Floor Elevator & Passage" },
+    { src: "/images/gallery/13_result.webp", category: "corridors", alt: "Stainless Steel Elevator Access" },
+    { src: "/images/gallery/14_result.webp", category: "corridors", alt: "Elevator Corridor Landing Area" },
     { src: "/images/gallery/06_result.webp", category: "corridors", alt: "Wide Main Corridor Passage" },
     { src: "/images/gallery/07_result.webp", category: "corridors", alt: "Clean Well-Lit Hotel Corridor" },
     { src: "/images/gallery/16_result.webp", category: "corridors", alt: "Guest Floor Corridor Walkway" },
     { src: "/images/gallery/19_result.webp", category: "corridors", alt: "Spotless Floor Passage" },
+    { src: "/images/gallery/2_result.webp", category: "corridors", alt: "Hotel Floor Passage" },
 
     // Party Hall & Banquets
     { src: "/images/gallery/08_result.webp", category: "partyhall", alt: "Spacious Party Hall Seating View" },

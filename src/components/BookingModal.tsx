@@ -115,19 +115,29 @@ Please share the room availability and booking details.`;
     }, 800);
   };
 
-  // Close modal on escape key press
+  // Close modal on escape key press & lock background scrolling
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") closeBooking();
     };
+
+    const lenis = (window as unknown as { __lenis?: { stop: () => void; start: () => void } }).__lenis;
+
     if (isOpen) {
+      lenis?.stop();
       document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
       window.addEventListener("keydown", handleKeyDown);
     } else {
+      lenis?.start();
       document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
     }
+
     return () => {
+      lenis?.start();
       document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [isOpen, closeBooking]);
@@ -135,23 +145,29 @@ Please share the room availability and booking details.`;
   return (
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div
+          data-lenis-prevent="true"
+          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 overflow-hidden"
+        >
           {/* Backdrop Overlay */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={closeBooking}
-            className="absolute inset-0 bg-[#2B2B2B]/40 backdrop-blur-md"
+            className="absolute inset-0 bg-[#2B2B2B]/50 backdrop-blur-md"
           />
 
           {/* Modal Container */}
           <motion.div
+            data-lenis-prevent="true"
+            onWheel={(e) => e.stopPropagation()}
+            onTouchMove={(e) => e.stopPropagation()}
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ type: "spring", duration: 0.5 }}
-            className="relative w-full max-w-lg overflow-hidden rounded-3xl border border-glass-border bg-[#FCFAF7]/95 shadow-2xl backdrop-blur-xl p-6 sm:p-8 z-10 max-h-[90vh] overflow-y-auto"
+            className="relative w-full max-w-lg rounded-3xl border border-glass-border bg-[#FCFAF7]/95 shadow-2xl backdrop-blur-xl p-6 sm:p-8 z-10 max-h-[88vh] modal-scroll"
           >
             {/* Close Button */}
             <button

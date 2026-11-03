@@ -15,6 +15,8 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
       touchMultiplier: 2.0,
     });
 
+    (window as unknown as { __lenis?: Lenis }).__lenis = lenis;
+
     let animationFrameId: number;
     
     function raf(time: number) {
@@ -24,13 +26,9 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
 
     animationFrameId = requestAnimationFrame(raf);
 
-    // Integrate Lenis with GSAP ScrollTrigger if needed
-    // gsap.ticker.add((time) => {
-    //   lenis.raf(time * 1000);
-    // });
-
     return () => {
       cancelAnimationFrame(animationFrameId);
+      (window as unknown as { __lenis?: Lenis | null }).__lenis = null;
       lenis.destroy();
     };
   }, []);
