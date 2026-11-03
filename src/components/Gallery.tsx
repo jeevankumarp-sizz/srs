@@ -52,9 +52,9 @@ export default function Gallery() {
     { src: "/images/gallery/16_result.webp", category: "corridors", alt: "Guest Floor Corridor Walkway" },
     { src: "/images/gallery/19_result.webp", category: "corridors", alt: "Spotless Floor Passage" },
     { src: "/images/gallery/2_result.webp", category: "corridors", alt: "Hotel Floor Passage" },
+    { src: "/images/gallery/08_result.webp", category: "corridors", alt: "Multi-Story Hotel Interior Atrium View" },
 
     // Party Hall & Banquets
-    { src: "/images/gallery/08_result.webp", category: "partyhall", alt: "Spacious Party Hall Seating View" },
     { src: "/images/gallery/09_result.webp", category: "partyhall", alt: "Modern Function Hall Banquet Stage" },
   ];
 
