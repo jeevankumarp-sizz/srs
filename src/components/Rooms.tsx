@@ -312,6 +312,8 @@ export default function Rooms() {
                 </div>
                 <button
                   onClick={() => openBooking(room.title)}
+                  data-track="whatsapp-booking-room-card"
+                  aria-label={`Book ${room.title} on WhatsApp`}
                   className="w-full bg-primary hover:bg-primary/95 text-white font-poppins font-semibold py-3.5 px-4 rounded-2xl transition-all shadow-md shadow-primary/5 hover:shadow-lg hover:shadow-primary/10 flex items-center justify-center gap-2 cursor-pointer group-hover:scale-[1.01] active:scale-[0.99]"
                 >
                   <MessageSquare size={16} className="fill-current" />

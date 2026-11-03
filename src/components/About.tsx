@@ -39,7 +39,7 @@ export default function About() {
             <div className="relative aspect-[4/3] rounded-[2rem] overflow-hidden shadow-xl border border-glass-border zoom-img-container">
               <Image
                 src="/images/about.jpg"
-                alt="Sangam Residency Room Ambient View"
+                alt="Sangam Residency Hotel Sagara Ambient Lounge and Room Interior"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover zoom-img"

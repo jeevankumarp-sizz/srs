@@ -328,6 +328,8 @@ Please share the room availability and booking details.`;
               {/* Submit Button */}
               <button
                 type="submit"
+                data-track="booking-form-submit"
+                aria-label="Send booking inquiry on WhatsApp"
                 className="w-full bg-primary hover:bg-primary/95 text-white font-poppins font-semibold py-3.5 px-6 rounded-xl transition-all shadow-md shadow-primary/20 hover:shadow-lg hover:shadow-primary/30 flex items-center justify-center gap-2 cursor-pointer mt-2 active:scale-[0.99]"
               >
                 Send Booking Inquiry on WhatsApp

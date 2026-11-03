@@ -63,7 +63,8 @@ export default function Footer() {
                 { name: "Our Rooms", id: "rooms" },
                 { name: "Amenities", id: "amenities" },
                 { name: "Photo Gallery", id: "gallery" },
-                { name: "Guest Reviews", id: "reviews" }
+                { name: "Guest Reviews", id: "reviews" },
+                { name: "FAQs & Guide", id: "faq" }
               ].map((link) => (
                 <li key={link.id}>
                   <button

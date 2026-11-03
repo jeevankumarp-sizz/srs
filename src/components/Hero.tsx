@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useBooking } from "@/context/BookingContext";
 import { Phone, Calendar, ArrowRight, MessageSquare } from "lucide-react";
 import { motion } from "framer-motion";
@@ -32,14 +33,22 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-[#2B2B2B]/75 via-[#2B2B2B]/60 to-[#2B2B2B]/75 z-10" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#FCFAF7] via-transparent to-[#2B2B2B]/30 z-10" />
-        {/* Actual hotel exterior photograph */}
+        {/* Actual hotel exterior photograph optimized for LCP */}
         <motion.div
           initial={{ scale: 1.08 }}
           animate={{ scale: 1 }}
           transition={{ duration: 10, ease: "easeOut" }}
-          style={{ backgroundImage: "url('/images/home/Home Section.webp')" }}
-          className="w-full h-full bg-cover bg-[center_32%]"
-        />
+          className="relative w-full h-full"
+        >
+          <Image
+            src="/images/home/Home Section.webp"
+            alt="Sangam Residency Hotel Exterior View in Sagara Karnataka"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-[center_32%]"
+          />
+        </motion.div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -81,6 +90,8 @@ export default function Hero() {
           >
             <button
               onClick={() => openBooking()}
+              aria-label="Book a room on WhatsApp"
+              data-track="whatsapp-booking-hero"
               className="bg-primary hover:bg-primary/95 text-white font-poppins font-semibold px-7 py-4 rounded-2xl transition-all shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 flex items-center gap-2 cursor-pointer hover:scale-[1.02] active:scale-[0.98]"
             >
               <MessageSquare size={16} className="fill-current" />
@@ -89,6 +100,8 @@ export default function Hero() {
 
             <a
               href="tel:+917676393132"
+              aria-label="Call Sangam Residency front desk at +91 7676393132"
+              data-track="phone-call-hero"
               className="bg-white/10 hover:bg-white/15 backdrop-blur-md border border-white/20 text-white font-poppins font-semibold px-6 py-4 rounded-2xl transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center gap-2"
             >
               <Phone size={16} />

@@ -1,10 +1,12 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Manrope, Poppins } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
 import { BookingProvider } from "@/context/BookingContext";
 import SmoothScroll from "@/components/SmoothScroll";
 import ScrollProgress from "@/components/ScrollProgress";
+import StructuredData from "@/components/StructuredData";
+import { siteConfig } from "@/config/site";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -27,23 +29,73 @@ const poppins = Poppins({
   display: "swap",
 });
 
+export const viewport: Viewport = {
+  themeColor: "#8B5E3C",
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
-  title: "Sangam Residency | Best Hotel in Sagara Karnataka | Nearby Jog Falls",
-  description: "Welcome to Sangam Residency in Sagara, Karnataka. Enjoy a peaceful and comfortable stay with clean family rooms, deluxe AC rooms, party hall, and 24-hour check-in/out. Perfect for families, tourists, and business travelers visiting Jog Falls, Keladi, and Ikkeri. Contact us for direct booking.",
-  keywords: "Sangam Residency Sagara, hotels in Sagara, lodging in Sagara, budget hotels Sagara Karnataka, family hotel Sagara, luxury rooms Sagara, hotels near Jog Falls, hotels near Sagara railway station, Jog Falls accommodation, Keladi temple stay",
-  openGraph: {
-    title: "Sangam Residency | Premium Hotel Stay in Sagara, Karnataka",
-    description: "Enjoy a peaceful and comfortable stay at Sangam Residency, Sagara. Clean rooms, modern reception, and warm service. Book via WhatsApp or call us directly.",
-    url: "https://sangamresidency.com",
-    siteName: "Sangam Residency",
-    locale: "en_IN",
-    type: "website",
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: "Sangam Residency | Best Hotel in Sagara Karnataka | Near Jog Falls",
+    template: "%s | Sangam Residency Sagara",
+  },
+  description: siteConfig.description,
+  applicationName: siteConfig.name,
+  authors: [{ name: siteConfig.name, url: siteConfig.url }],
+  creator: siteConfig.name,
+  publisher: siteConfig.name,
+  formatDetection: {
+    telephone: false,
+    address: false,
+    email: false,
   },
   alternates: {
-    canonical: "/",
+    canonical: siteConfig.url,
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    title: "Sangam Residency | Comfortable Stay in the Heart of Sagara",
+    description: siteConfig.description,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: "Sangam Residency Hotel Sagara Exterior View",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sangam Residency | Hotel Stay in Sagara Near Jog Falls",
+    description: siteConfig.description,
+    images: [siteConfig.ogImage],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   icons: {
     icon: "/favicon.ico",
+    apple: "/images/logo.jpeg",
+  },
+  verification: {
+    google: siteConfig.verification.google || undefined,
+    other: siteConfig.verification.bing
+      ? { "msvalidate.01": siteConfig.verification.bing }
+      : undefined,
   },
 };
 
@@ -54,6 +106,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <StructuredData />
+      </head>
       <body
         className={`${playfair.variable} ${manrope.variable} ${poppins.variable} font-manrope antialiased bg-background text-foreground pb-[76px] md:pb-0`}
       >

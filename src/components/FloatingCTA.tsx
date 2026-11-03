@@ -36,8 +36,9 @@ export default function FloatingCTA() {
             {/* Phone Call Button */}
             <a
               href="tel:+917676393132"
+              data-track="phone-call-floating"
               className="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white shadow-lg hover:bg-primary/95 transition-all duration-300 hover:scale-110 group relative"
-              aria-label="Call Sangam Residency"
+              aria-label="Call Sangam Residency at +91 7676393132"
             >
               <Phone size={20} />
               <span className="absolute right-14 bg-[#2B2B2B] text-white text-xs font-poppins px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap shadow-md">
@@ -48,6 +49,7 @@ export default function FloatingCTA() {
             {/* WhatsApp Booking Trigger */}
             <button
               onClick={() => openBooking()}
+              data-track="whatsapp-booking-floating"
               className="flex items-center justify-center w-12 h-12 rounded-full bg-[#25D366] text-white shadow-lg hover:bg-[#25D366]/90 transition-all duration-300 hover:scale-110 group relative cursor-pointer"
               aria-label="Book on WhatsApp"
             >
@@ -65,6 +67,8 @@ export default function FloatingCTA() {
         {/* Call Now */}
         <a
           href="tel:+917676393132"
+          data-track="phone-call-mobile-bar"
+          aria-label="Call Sangam Residency"
           className="flex-1 flex items-center justify-center gap-2 border border-primary/20 hover:bg-primary/5 text-primary font-poppins font-semibold text-sm py-3.5 rounded-2xl active:scale-[0.98] transition-all"
         >
           <Phone size={16} />
@@ -74,6 +78,8 @@ export default function FloatingCTA() {
         {/* Book on WhatsApp */}
         <button
           onClick={() => openBooking()}
+          data-track="whatsapp-booking-mobile-bar"
+          aria-label="Book room on WhatsApp"
           className="flex-[1.5] flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#25D366]/90 text-white font-poppins font-semibold text-sm py-3.5 rounded-2xl shadow-sm active:scale-[0.98] transition-all cursor-pointer"
         >
           <MessageSquare size={16} className="fill-current" />

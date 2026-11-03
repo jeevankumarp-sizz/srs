@@ -5,6 +5,7 @@ import Rooms from "@/components/Rooms";
 import Amenities from "@/components/Amenities";
 import Gallery from "@/components/Gallery";
 import Reviews from "@/components/Reviews";
+import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import BookingModal from "@/components/BookingModal";
@@ -35,6 +36,9 @@ export default function Home() {
 
         {/* Carousel Reviews */}
         <Reviews />
+
+        {/* Frequently Asked Questions for Guests & Local SEO */}
+        <FAQ />
 
         {/* Contact Coordinates & Map */}
         <Contact />

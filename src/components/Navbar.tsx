@@ -50,6 +50,7 @@ export default function Navbar() {
     { name: "Amenities", id: "amenities" },
     { name: "Gallery", id: "gallery" },
     { name: "Reviews", id: "reviews" },
+    { name: "FAQ", id: "faq" },
     { name: "Contact", id: "contact" }
   ];
 
