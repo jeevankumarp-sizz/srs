@@ -83,11 +83,16 @@ export default function Footer() {
             <ul className="space-y-3 text-sm text-[#2B2B2B]/80 font-manrope">
               <li className="flex items-start gap-2.5">
                 <MapPin size={16} className="text-primary mt-0.5 shrink-0" />
-                <span>
+                <a
+                  href="https://maps.app.goo.gl/sozRuPa4E7yKx6zz6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors hover:underline"
+                >
                   Behind HP Petrol Bunk,<br />
                   Bangalore–Honnavar Highway,<br />
                   Sagara, Karnataka – 577401
-                </span>
+                </a>
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone size={16} className="text-primary shrink-0" />

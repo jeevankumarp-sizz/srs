@@ -7,9 +7,11 @@ import { motion } from "framer-motion";
 export default function Contact() {
   const { openBooking } = useBooking();
 
+  const GOOGLE_MAPS_LOCATION = "https://maps.app.goo.gl/sozRuPa4E7yKx6zz6";
+
   const handleDirections = () => {
-    // Open Google Maps search for Sangam Residency Sagara
-    window.open("https://maps.app.goo.gl/Lz87gK2PjVixfKsw9", "_blank");
+    // Open Google Maps location for Sangam Residency Sagara
+    window.open(GOOGLE_MAPS_LOCATION, "_blank");
   };
 
   return (
@@ -40,20 +42,31 @@ export default function Contact() {
             {/* Info Cards */}
             <div className="space-y-6">
               {/* Address Card */}
-              <div className="glass-card rounded-3xl p-6 border border-[#8B5E3C]/5 flex gap-4">
-                <div className="w-10 h-10 rounded-xl bg-primary/5 flex items-center justify-center text-primary shrink-0">
+              <a
+                href={GOOGLE_MAPS_LOCATION}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass-card rounded-3xl p-6 border border-[#8B5E3C]/5 hover:border-primary/20 transition-all flex gap-4 group cursor-pointer"
+              >
+                <div className="w-10 h-10 rounded-xl bg-primary/5 group-hover:bg-primary/10 transition-colors flex items-center justify-center text-primary shrink-0">
                   <MapPin size={20} />
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold font-poppins text-[#2B2B2B] uppercase tracking-wider mb-1">Our Address</h4>
+                  <div className="flex items-center gap-1.5 mb-1">
+                    <h4 className="text-sm font-semibold font-poppins text-[#2B2B2B] uppercase tracking-wider group-hover:text-primary transition-colors">Our Address</h4>
+                    <ExternalLink size={12} className="text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </div>
                   <p className="text-sm text-[#2B2B2B]/75 font-manrope leading-relaxed">
                     Sangam Residency,<br />
                     Behind HP Petrol Bunk,<br />
                     Bangalore–Honnavar Highway,<br />
                     Sagara, Karnataka – 577401
                   </p>
+                  <span className="inline-block mt-2 text-xs font-semibold text-primary font-poppins underline underline-offset-2">
+                    Open in Google Maps →
+                  </span>
                 </div>
-              </div>
+              </a>
 
               {/* Phone Card */}
               <div className="glass-card rounded-3xl p-6 border border-[#8B5E3C]/5 flex gap-4">
