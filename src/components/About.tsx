@@ -77,7 +77,7 @@ export default function About() {
                 Conveniently located behind the Bangalore–Honnavar Highway in Sagara, Karnataka, <strong>Sangam Residency</strong> is the preferred choice for family vacationers, spiritual pilgrims, and business travelers alike. We bridge the gap between premium hospitality and realistic pricing.
               </p>
               <p className="text-[#2B2B2B]/75 leading-relaxed font-manrope text-sm sm:text-base">
-                Whether you are visiting the majestic <strong>Jog Falls</strong> (just 45 minutes away), exploring the rich historical heritage of <strong>Keladi</strong> and <strong>Ikkeri</strong> temples, or passing through on business, our bright interiors, warm lighting, and spotless environment ensure a refreshing rest.
+                Whether you are visiting the majestic <strong>Jog Falls</strong> (just 45 minutes away), taking a divine pilgrimage to <strong>Sigandur Chowdeshwari Temple</strong> (just 55 minutes away), exploring the rich historical heritage of <strong>Keladi</strong> and <strong>Ikkeri</strong> temples, or passing through on business, our bright interiors, warm lighting, and spotless environment ensure a refreshing rest.
               </p>
             </div>
 

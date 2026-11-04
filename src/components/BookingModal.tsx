@@ -14,10 +14,10 @@ const bookingSchema = zod.object({
   name: zod.string().min(2, "Name must be at least 2 characters"),
   phone: zod.string().regex(/^[6-9]\d{9}$/, "Please enter a valid 10-digit Indian phone number"),
   roomType: zod.enum([
-    "Non AC Deluxe Room (₹1,499 - 2 Guests)",
+    "Non AC Deluxe Room (₹1,199 - 2 Guests)",
     "AC Deluxe Room (₹1,999 - 2 Guests)",
-    "Executive Suite Room (₹3,999 - 6 Guests)",
-    "Dormitory (₹499/person - 10 to 15 Guests)",
+    "Executive AC Suite Room (₹3,999 - 6 Guests)",
+    "Spacious AC/Non AC Dormitory (₹499/person - 10 to 15 Guests)",
   ]),
   checkIn: zod.string().min(1, "Check-in date is required"),
   checkOut: zod.string().min(1, "Check-out date is required"),
@@ -51,7 +51,7 @@ export default function BookingModal() {
     defaultValues: {
       name: "",
       phone: "",
-      roomType: "Non AC Deluxe Room (₹1,499 - 2 Guests)",
+      roomType: "Non AC Deluxe Room (₹1,199 - 2 Guests)",
       checkIn: "",
       checkOut: "",
       guests: 2,
@@ -65,19 +65,19 @@ export default function BookingModal() {
     if (selectedRoom) {
       const formatted = selectedRoom.toLowerCase();
       if (formatted.includes("non ac") || formatted.includes("non-ac")) {
-        setValue("roomType", "Non AC Deluxe Room (₹1,499 - 2 Guests)");
+        setValue("roomType", "Non AC Deluxe Room (₹1,199 - 2 Guests)");
         setValue("guests", 2);
       } else if (formatted.includes("ac deluxe")) {
         setValue("roomType", "AC Deluxe Room (₹1,999 - 2 Guests)");
         setValue("guests", 2);
       } else if (formatted.includes("suite")) {
-        setValue("roomType", "Executive Suite Room (₹3,999 - 6 Guests)");
+        setValue("roomType", "Executive AC Suite Room (₹3,999 - 6 Guests)");
         setValue("guests", 6);
       } else if (formatted.includes("dormitory") || formatted.includes("dorm")) {
-        setValue("roomType", "Dormitory (₹499/person - 10 to 15 Guests)");
+        setValue("roomType", "Spacious AC/Non AC Dormitory (₹499/person - 10 to 15 Guests)");
         setValue("guests", 10);
       } else {
-        setValue("roomType", "Non AC Deluxe Room (₹1,499 - 2 Guests)");
+        setValue("roomType", "Non AC Deluxe Room (₹1,199 - 2 Guests)");
       }
     }
   }, [selectedRoom, setValue]);
@@ -233,10 +233,10 @@ Please share the room availability and booking details.`;
                   {...register("roomType")}
                   className="w-full px-4 py-3 rounded-xl border border-primary/20 bg-white/70 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition-all font-manrope text-sm appearance-none bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%238B5E3C%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m6%209%206%206%206-6%22%2F%3E%3C%2Fsvg%3E')] bg-[length:1.25rem] bg-[right_1rem_center] bg-no-repeat"
                 >
-                  <option value="Non AC Deluxe Room (₹1,499 - 2 Guests)">Non AC Deluxe Room — ₹1,499 (2 Persons)</option>
+                  <option value="Non AC Deluxe Room (₹1,199 - 2 Guests)">Non AC Deluxe Room — ₹1,199 (2 Persons)</option>
                   <option value="AC Deluxe Room (₹1,999 - 2 Guests)">AC Deluxe Room — ₹1,999 (2 Persons)</option>
-                  <option value="Executive Suite Room (₹3,999 - 6 Guests)">Executive Suite Room — ₹3,999 (6 Persons)</option>
-                  <option value="Dormitory (₹499/person - 10 to 15 Guests)">Dormitory — ₹499/person (10 to 15 Persons)</option>
+                  <option value="Executive AC Suite Room (₹3,999 - 6 Guests)">Executive AC Suite Room — ₹3,999 (6 Persons)</option>
+                  <option value="Spacious AC/Non AC Dormitory (₹499/person - 10 to 15 Guests)">Spacious AC/Non AC Dormitory — ₹499/person (10 to 15 Persons)</option>
                 </select>
                 {errors.roomType && (
                   <p className="text-red-500 text-xs mt-1 font-medium">{errors.roomType.message}</p>
@@ -298,15 +298,15 @@ Please share the room availability and booking details.`;
 
                 <div>
                   <label className="block text-xs font-semibold text-[#2B2B2B]/80 font-poppins uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
-                    <Bed size={14} className="text-primary" /> Extra Bed (+₹499)
+                    <Bed size={14} className="text-primary" /> Extra Bed (+₹299)
                   </label>
                   <select
                     {...register("extraBed")}
                     className="w-full px-4 py-3 rounded-xl border border-primary/20 bg-white/70 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition-all font-manrope text-sm appearance-none bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%238B5E3C%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m6%209%206%206%206-6%22%2F%3E%3C%2Fsvg%3E')] bg-[length:1.25rem] bg-[right_1rem_center] bg-no-repeat"
                   >
                     <option value="No">No extra bed needed</option>
-                    <option value="Yes (1 Extra Bed - ₹499)">1 Extra Bed (+₹499)</option>
-                    <option value="Yes (2 Extra Beds - ₹998)">2 Extra Beds (+₹998)</option>
+                    <option value="Yes (1 Extra Bed - ₹299)">1 Extra Bed (+₹299)</option>
+                    <option value="Yes (2 Extra Beds - ₹598)">2 Extra Beds (+₹598)</option>
                     <option value="Yes (3+ Extra Beds)">3+ Extra Beds</option>
                   </select>
                 </div>

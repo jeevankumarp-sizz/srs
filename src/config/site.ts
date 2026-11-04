@@ -22,7 +22,7 @@ export const siteConfig = {
   legalName: "Sangam Residency Hotel",
   tagline: "A Peaceful Stay for Families and Travellers",
   description:
-    "Experience comfortable, hygienic, and affordable lodging at Sangam Residency in Sagara, Karnataka. Featuring Non-AC & AC Deluxe Rooms, Executive Suite Rooms, and AC Dormitory with 24-hour check-in/out, free Wi-Fi, and secured parking. Just 40 minutes from Jog Falls.",
+    "Experience comfortable, hygienic, and affordable lodging at Sangam Residency in Sagara, Karnataka. Featuring Non-AC & AC Deluxe Rooms, Executive AC Suite Rooms, and Spacious AC/Non AC Dormitory with 24-hour check-in/out, free Wi-Fi, and secured parking. Just 40 minutes from Jog Falls and 55 minutes from Sigandur Temple.",
   url: getBaseUrl(),
   ogImage: "/images/home/Home Section.webp",
   logo: "/images/logo.jpeg",
@@ -32,8 +32,8 @@ export const siteConfig = {
     bestRating: 5,
   },
   contact: {
-    phone: "+917676393132",
-    displayPhone: "+91 7676393132",
+    phone: "+919164769438",
+    displayPhone: "+91 9164769438",
     whatsapp: "919164769438",
     displayWhatsapp: "+91 9164769438",
     whatsappBookingLink: "https://wa.me/919164769438",
@@ -73,7 +73,7 @@ export const siteConfig = {
       id: "non-ac-deluxe",
       name: "Non AC Deluxe Room",
       description: "Clean, airy and well-ventilated deluxe accommodation with double bed, ambient lighting, work desk, and 24-hour hot water.",
-      price: 1499,
+      price: 1199,
       currency: "INR",
       occupancy: 2,
       bedType: "Double Bed",
@@ -93,7 +93,7 @@ export const siteConfig = {
     },
     {
       id: "executive-suite",
-      name: "Executive Suite Room",
+      name: "Executive AC Suite Room",
       description: "Expansive luxury suite ideal for large families or groups of 6, featuring wooden ceiling accents, ample space, and premium comfort.",
       price: 3999,
       currency: "INR",
@@ -104,8 +104,8 @@ export const siteConfig = {
     },
     {
       id: "dormitory",
-      name: "Spacious AC Dormitory",
-      description: "Clean, air-conditioned shared dormitory with comfortable individual beds and dedicated lockers. Perfect for tour groups and pilgrims.",
+      name: "Spacious AC/Non AC Dormitory",
+      description: "Clean, well-maintained shared dormitory with comfortable individual beds and dedicated lockers. AC and Non-AC options available for tour groups and pilgrims.",
       price: 499,
       priceUnit: "per person",
       currency: "INR",
@@ -136,7 +136,7 @@ export const siteConfig = {
     { name: "Keladi Rameshwara Temple & Museum", distance: "8 km", duration: "15 mins" },
     { name: "Ikkeri Aghoreshwara Temple", distance: "6 km", duration: "12 mins" },
     { name: "Varadamoola (Source of River Varada)", distance: "6 km", duration: "12 mins" },
-    { name: "Sigandur Chowdeshwari Temple", distance: "42 km", duration: "1 hr 15 mins" },
+    { name: "Sigandur Chowdeshwari Temple", distance: "42 km", duration: "55 mins" },
     { name: "Sagara Railway Station (SRF)", distance: "2 km", duration: "5 mins" },
     { name: "Sagara KSRTC Bus Stand", distance: "1.5 km", duration: "4 mins" },
   ],
@@ -149,7 +149,7 @@ export const siteConfig = {
     },
     {
       question: "What are the room tariffs at Sangam Residency Sagara?",
-      answer: "Our room tariffs are: Non AC Deluxe Room at ₹1,499/night (2 guests), AC Deluxe Room at ₹1,999/night (2 guests), Executive Suite Room at ₹3,999/night (up to 6 guests), and AC Dormitory beds at ₹499/person per night (ideal for 10–15 guests). An extra bed is also available for ₹499.",
+      answer: "Our room tariffs are: Non AC Deluxe Room at ₹1,199/night (2 guests), AC Deluxe Room at ₹1,999/night (2 guests), Executive AC Suite Room at ₹3,999/night (up to 6 guests), and Spacious AC/Non AC Dormitory beds at ₹499/person per night (ideal for 10–15 guests). An extra bed is also available for ₹299.",
     },
     {
       question: "What are the check-in and check-out timings?",
@@ -161,11 +161,11 @@ export const siteConfig = {
     },
     {
       question: "How do I book a room at Sangam Residency?",
-      answer: "You can book directly via WhatsApp at +91 9164769438 or by calling our 24/7 reservation desk at +91 7676393132. You can also click the 'Book on WhatsApp' buttons throughout this website to instantly enquire about availability.",
+      answer: "You can book directly via WhatsApp at +91 9164769438 or by calling our 24/7 reservation desk at +91 9164769438. You can also click the 'Book on WhatsApp' buttons throughout this website to instantly enquire about availability.",
     },
     {
       question: "Are there group stay options available for pilgrimages and tours?",
-      answer: "Yes! We offer a spacious AC Dormitory for ₹499 per person (accommodating 10 to 15 people) and Executive Suite Rooms for up to 6 persons. Both are ideal for pilgrimage groups visiting Sigandur, Keladi, and Ikkeri.",
+      answer: "Yes! We offer a spacious AC/Non AC Dormitory for ₹499 per person (accommodating 10 to 15 people) and Executive AC Suite Rooms for up to 6 persons. Both are ideal for pilgrimage groups visiting Sigandur, Keladi, and Ikkeri.",
     },
     {
       question: "Is hot water available in all rooms?",

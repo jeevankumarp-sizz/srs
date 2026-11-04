@@ -39,17 +39,17 @@ export default function Amenities() {
     {
       icon: PlusCircle,
       title: "Extra Bed Facility",
-      desc: "Additional comfortable bed provided on request at ₹499/bed across all rooms.",
+      desc: "Additional comfortable bed provided on request at ₹299/bed across all rooms.",
     },
     {
       icon: Crown,
-      title: "Suites",
-      desc: "Luxurious executive suite rooms featuring separate lounges and wooden ceilings.",
+      title: "Executive AC Suites",
+      desc: "Luxurious executive AC suite rooms featuring separate lounges and wooden ceilings.",
     },
     {
       icon: Bed,
-      title: "AC Dormitory",
-      desc: "Budget-friendly shared bed configurations with lockers and split AC.",
+      title: "AC/Non-AC Dormitory",
+      desc: "Budget-friendly shared bed configurations with lockers and AC/Non-AC options.",
     },
     {
       icon: Sparkles,

@@ -106,11 +106,11 @@ export default function Navbar() {
             {/* CTA Buttons */}
             <div className="hidden md:flex items-center gap-4">
               <a
-                href="tel:+917676393132"
+                href="tel:+919164769438"
                 className="flex items-center gap-2 text-sm font-poppins font-semibold text-primary hover:text-primary/80 transition-colors py-2 px-3 rounded-full hover:bg-primary/5"
               >
                 <Phone size={14} />
-                <span>+91 7676393132</span>
+                <span>+91 9164769438</span>
               </a>
               <button
                 onClick={() => openBooking()}
@@ -175,11 +175,11 @@ export default function Navbar() {
 
               <div className="flex flex-col gap-3 mt-6">
                 <a
-                  href="tel:+917676393132"
+                  href="tel:+919164769438"
                   className="flex items-center justify-center gap-2 font-poppins font-semibold text-primary py-3 rounded-xl border border-primary/20 hover:bg-primary/5 transition-colors"
                 >
                   <Phone size={16} />
-                  <span>Call +91 7676393132</span>
+                  <span>Call +91 9164769438</span>
                 </a>
                 <button
                   onClick={() => {

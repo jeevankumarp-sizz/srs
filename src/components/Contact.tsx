@@ -75,8 +75,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="text-sm font-semibold font-poppins text-[#2B2B2B] uppercase tracking-wider mb-1">Phone Enquiries</h4>
-                  <a href="tel:+917676393132" className="block text-base font-bold text-primary font-poppins mt-0.5 hover:underline">
-                    +91 7676393132
+                  <a href="tel:+919164769438" className="block text-base font-bold text-primary font-poppins mt-0.5 hover:underline">
+                    +91 9164769438
                   </a>
                   <p className="text-xs text-[#2B2B2B]/60 mt-1 font-manrope">Available 24 Hours for urgent lodging assistance.</p>
                 </div>

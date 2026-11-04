@@ -107,7 +107,7 @@ export default function Rooms() {
     {
       id: "non-ac-deluxe",
       title: "Non AC Deluxe Room",
-      price: "₹1,499",
+      price: "₹1,199",
       priceDesc: "per night",
       capacity: "2 Guests",
       acOption: "Non-AC Deluxe",
@@ -159,7 +159,7 @@ export default function Rooms() {
     },
     {
       id: "executive-suite",
-      title: "Executive Suite Room",
+      title: "Executive AC Suite Room",
       price: "₹3,999",
       priceDesc: "per night",
       capacity: "6 Guests",
@@ -181,12 +181,12 @@ export default function Rooms() {
     },
     {
       id: "dormitory",
-      title: "Spacious Dormitory",
+      title: "Spacious AC/Non AC Dormitory",
       price: "₹499",
       priceDesc: "per person / night",
       capacity: "10–15 Guests",
-      acOption: "Air Conditioned (AC)",
-      description: "Clean, air-conditioned shared dormitory with comfortable individual beds and dedicated lockers. Perfect for tour groups and pilgrims.",
+      acOption: "AC / Non-AC Options",
+      description: "Clean, well-maintained shared dormitory with comfortable individual beds and dedicated lockers. AC and Non-AC options available for tour groups and pilgrims.",
       images: [
         "/images/rooms/dormitory/1_result.webp",
         "/images/rooms/dormitory/2_result.webp",
@@ -234,7 +234,7 @@ export default function Rooms() {
               </div>
             </div>
             <div className="text-right shrink-0">
-              <span className="block text-base font-extrabold text-primary font-manrope">₹499</span>
+              <span className="block text-base font-extrabold text-primary font-manrope">₹299</span>
               <span className="block text-[11px] text-[#2B2B2B]/60 font-medium">per bed</span>
             </div>
           </div>
@@ -304,12 +304,8 @@ export default function Rooms() {
                 </div>
               </div>
 
-              {/* Action Button & Extra Bed hint */}
-              <div className="p-6 pt-0 mt-2 space-y-3">
-                <div className="text-[11px] text-[#2B2B2B]/60 font-manrope flex items-center justify-between bg-secondary/50 px-3 py-1.5 rounded-lg">
-                  <span>Need an extra bed?</span>
-                  <span className="font-semibold text-primary font-poppins">+₹499 / bed</span>
-                </div>
+              {/* Action Button */}
+              <div className="p-6 pt-0 mt-2">
                 <button
                   onClick={() => openBooking(room.title)}
                   data-track="whatsapp-booking-room-card"

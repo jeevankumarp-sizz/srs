@@ -28,15 +28,15 @@ export default function Gallery() {
     { src: "/images/gallery/11_result.webp", category: "lobby", alt: "Lobby Wooden Accent Ceiling" },
     { src: "/images/about.jpg", category: "lobby", alt: "Hotel Lobby Seating & Ambient Lounge" },
 
-    // Rooms (Deluxe AC, Non-AC, Executive Suite, Dormitory)
+    // Rooms (Deluxe AC, Non-AC, Executive AC Suite, AC/Non AC Dormitory)
     { src: "/images/rooms/ac-deluxe/1_result.webp", category: "rooms", alt: "AC Deluxe Room - Queen Bed Setup" },
     { src: "/images/rooms/ac-deluxe/2_result.webp", category: "rooms", alt: "AC Deluxe Room - Ambient Lighting & Desk" },
     { src: "/images/rooms/non-ac-deluxe/1_result.webp", category: "rooms", alt: "Non AC Deluxe Room - Double Bed" },
     { src: "/images/rooms/non-ac-deluxe/2_result.webp", category: "rooms", alt: "Non AC Deluxe Room - Bright Interiors" },
-    { src: "/images/rooms/executive-suite/1_result.webp", category: "rooms", alt: "Executive Suite Room - Multiple Beds & Lounge" },
-    { src: "/images/rooms/executive-suite/2_result.webp", category: "rooms", alt: "Executive Suite Room - Wooden Ceiling Accent" },
-    { src: "/images/rooms/dormitory/1_result.webp", category: "rooms", alt: "Dormitory - Group AC Stay" },
-    { src: "/images/rooms/dormitory/2_result.webp", category: "rooms", alt: "Dormitory - Individual Clean Beds" },
+    { src: "/images/rooms/executive-suite/1_result.webp", category: "rooms", alt: "Executive AC Suite Room - Multiple Beds & Lounge" },
+    { src: "/images/rooms/executive-suite/2_result.webp", category: "rooms", alt: "Executive AC Suite Room - Wooden Ceiling Accent" },
+    { src: "/images/rooms/dormitory/1_result.webp", category: "rooms", alt: "Spacious AC/Non AC Dormitory - Group Stay" },
+    { src: "/images/rooms/dormitory/2_result.webp", category: "rooms", alt: "Spacious AC/Non AC Dormitory - Individual Clean Beds" },
     { src: "/images/gallery/3_result.webp", category: "rooms", alt: "Clean Guest Room Bedding" },
     { src: "/images/gallery/04_result.webp", category: "rooms", alt: "Room Interiors & Furniture" },
     { src: "/images/gallery/05_result.webp", category: "rooms", alt: "Spacious Room Layout & Wardrobe" },

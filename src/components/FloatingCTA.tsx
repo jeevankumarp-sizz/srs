@@ -35,14 +35,14 @@ export default function FloatingCTA() {
           >
             {/* Phone Call Button */}
             <a
-              href="tel:+917676393132"
+              href="tel:+919164769438"
               data-track="phone-call-floating"
               className="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white shadow-lg hover:bg-primary/95 transition-all duration-300 hover:scale-110 group relative"
-              aria-label="Call Sangam Residency at +91 7676393132"
+              aria-label="Call Sangam Residency at +91 9164769438"
             >
               <Phone size={20} />
               <span className="absolute right-14 bg-[#2B2B2B] text-white text-xs font-poppins px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap shadow-md">
-                Call: +91 7676393132
+                Call: +91 9164769438
               </span>
             </a>
 
@@ -66,9 +66,9 @@ export default function FloatingCTA() {
       <div className="fixed bottom-0 left-0 right-0 z-40 bg-[#FCFAF7]/95 border-t border-[#8B5E3C]/10 px-4 py-3.5 flex gap-3 shadow-[0_-8px_30px_rgb(0,0,0,0.06)] backdrop-blur-md md:hidden">
         {/* Call Now */}
         <a
-          href="tel:+917676393132"
+          href="tel:+919164769438"
           data-track="phone-call-mobile-bar"
-          aria-label="Call Sangam Residency"
+          aria-label="Call Sangam Residency at +91 9164769438"
           className="flex-1 flex items-center justify-center gap-2 border border-primary/20 hover:bg-primary/5 text-primary font-poppins font-semibold text-sm py-3.5 rounded-2xl active:scale-[0.98] transition-all"
         >
           <Phone size={16} />

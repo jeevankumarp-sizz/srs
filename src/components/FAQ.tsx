@@ -96,11 +96,11 @@ export default function FAQ() {
           </div>
           <div className="flex flex-wrap items-center justify-center gap-3 shrink-0">
             <a
-              href="tel:+917676393132"
+              href="tel:+919164769438"
               className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white border border-primary/20 text-primary text-xs sm:text-sm font-poppins font-semibold hover:bg-primary/5 transition-all"
             >
               <Phone size={14} />
-              <span>Call +91 7676393132</span>
+              <span>Call +91 9164769438</span>
             </a>
             <button
               onClick={() => openBooking()}
