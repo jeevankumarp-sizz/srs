@@ -23,6 +23,7 @@ export default function Gallery() {
     // Reception & Front Office
     { src: "/images/gallery/1_result.webp", category: "reception", alt: "Reception Front Desk" },
     { src: "/images/gallery/17_result.webp", category: "reception", alt: "Front Desk & Welcome Area" },
+    { src: "/images/gallery/20_result.webp", category: "reception", alt: "Reception Sightseeing & Tourist Guidance Distance Board" },
 
     // Lobby & Lounge (Strictly lounge and seating, no lift photos)
     { src: "/images/gallery/11_result.webp", category: "lobby", alt: "Lobby Wooden Accent Ceiling" },
