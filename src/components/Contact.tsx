@@ -1,11 +1,28 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { useBooking } from "@/context/BookingContext";
 import { Phone, MapPin, MessageSquare, Navigation, CalendarDays, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Contact() {
   const { openBooking } = useBooking();
+  const [loadMap, setLoadMap] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setLoadMap(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "300px" }
+    );
+    const el = document.getElementById("contact");
+    if (el) observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   const GOOGLE_MAPS_LOCATION = "https://maps.app.goo.gl/sozRuPa4E7yKx6zz6";
 
@@ -135,18 +152,29 @@ export default function Contact() {
               <ExternalLink size={12} />
             </button>
 
-            {/* Google Maps Iframe */}
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.108426002972!2d75.0210214!3d14.1610444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbbe7a01d0cf8eb%3A0xe6bf448f7ee8eb4d!2sSangam%20Residency!5e0!3m2!1sen!2sin!4v1720270000000!5m2!1sen!2sin"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen={true}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Sangam Residency Location Map Sagara"
-              className="w-full h-full min-h-[350px]"
-            />
+            {/* Google Maps Iframe (Lazy mounted via IntersectionObserver) */}
+            {loadMap ? (
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.108426002972!2d75.0210214!3d14.1610444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbbe7a01d0cf8eb%3A0xe6bf448f7ee8eb4d!2sSangam%20Residency!5e0!3m2!1sen!2sin!4v1720270000000!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Sangam Residency Location Map Sagara"
+                className="w-full h-full min-h-[350px]"
+              />
+            ) : (
+              <div 
+                onClick={handleDirections}
+                className="w-full h-full min-h-[350px] bg-[#EFECE6] flex flex-col items-center justify-center gap-2 cursor-pointer text-xs text-[#2B2B2B]/75 font-manrope hover:bg-[#E8E4DD] transition-colors"
+              >
+                <MapPin size={24} className="text-primary animate-bounce" />
+                <span className="font-semibold text-sm text-[#2B2B2B]">Sangam Residency Sagara</span>
+                <span className="text-[11px] text-primary underline">Click to view location map</span>
+              </div>
+            )}
           </motion.div>
 
         </div>

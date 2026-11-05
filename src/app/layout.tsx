@@ -11,22 +11,25 @@ import { siteConfig } from "@/config/site";
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair-display",
-  weight: ["400", "500", "600", "700"],
+  weight: ["600", "700"],
   display: "swap",
+  fallback: ["Georgia", "serif"],
 });
 
 const manrope = Manrope({
   subsets: ["latin"],
   variable: "--font-manrope",
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
+  fallback: ["system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"],
 });
 
 const poppins = Poppins({
   subsets: ["latin"],
   variable: "--font-poppins",
-  weight: ["400", "500", "600", "700"],
+  weight: ["500", "600"],
   display: "swap",
+  fallback: ["system-ui", "-apple-system", "sans-serif"],
 });
 
 export const viewport: Viewport = {
@@ -123,6 +126,21 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <head>
         <StructuredData />
+        {/* Preload primary custom font (Latin WOFF2) to eliminate font latency & render-blocking delay */}
+        <link
+          rel="preload"
+          href="/_next/static/media/f9e1dbe9676d9bb6-s.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/media/f9e1dbe9676d9bb6-s.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
         {/* Preload critical LCP Hero Banner image with high priority */}
         <link
           rel="preload"
@@ -131,12 +149,36 @@ export default function RootLayout({
           type="image/webp"
           fetchPriority="high"
         />
-        {/* Inline minimal critical CSS for above-the-fold paint */}
+        {/* Inline critical CSS for instantaneous above-the-fold first paint */}
         <style
           dangerouslySetInnerHTML={{
             __html: `
-              #hero { background-color: #2B2B2B; min-height: 92vh; }
-              body { background-color: #FCFAF7; color: #2B2B2B; }
+              :root {
+                --background: #FCFAF7;
+                --foreground: #2B2B2B;
+                --primary: #8B5E3C;
+                --accent-gold: #C89B5E;
+              }
+              html, body {
+                background-color: #FCFAF7;
+                color: #2B2B2B;
+                margin: 0;
+                padding: 0;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+              }
+              #hero {
+                background-color: #2B2B2B;
+                min-height: 92vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
+              .glass-nav {
+                background: rgba(252, 250, 247, 0.85);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                border-bottom: 1px solid rgba(139, 94, 60, 0.08);
+              }
             `,
           }}
         />
