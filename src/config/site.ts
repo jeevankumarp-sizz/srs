@@ -61,9 +61,9 @@ export const siteConfig = {
   paymentAccepted: "Cash, UPI, Credit Card, Debit Card",
   priceRange: "₹499 - ₹3,999",
 
-  // Verification IDs (Populated via environment variables)
+  // Verification IDs
   verification: {
-    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "4aa31f3e93459c50",
     bing: process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION || "",
   },
 
