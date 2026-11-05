@@ -45,6 +45,7 @@ export default function Hero() {
             alt="Sangam Residency Hotel Exterior View in Sagara Karnataka"
             fill
             priority
+            fetchPriority="high"
             sizes="100vw"
             className="object-cover object-[center_32%]"
           />
@@ -58,7 +59,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center gap-2 bg-[#FCFAF7]/10 backdrop-blur-md border border-white/10 px-4 py-1.5 rounded-full text-xs sm:text-sm font-poppins font-medium text-accent-gold"
+            className="inline-flex items-center gap-2 bg-[#FCFAF7]/10 backdrop-blur-md border border-white/10 px-4 py-1.5 rounded-full text-xs sm:text-sm font-poppins font-medium text-[#F5D061]"
           >
             <span>⭐ 4.5+ Google Rated Family Hotel</span>
           </motion.div>
@@ -69,14 +70,14 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-playfair leading-[1.15] text-[#FCFAF7]"
           >
-            Best Hotel in <span className="text-accent-gold">Sagara</span> — Near Jog Falls
+            Best Hotel in <span className="text-[#F5D061]">Sagara</span> — Near Jog Falls
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-lg sm:text-xl text-[#FCFAF7]/85 font-light max-w-xl mx-auto lg:mx-0 font-manrope leading-relaxed"
+            className="text-lg sm:text-xl text-white font-normal max-w-xl mx-auto lg:mx-0 font-manrope leading-relaxed"
           >
             Comfortable, hygienic rooms with 24/7 hot water, free Wi-Fi &amp; secured parking — 40 mins from Jog Falls, 55 mins from Sigandur Temple.
           </motion.p>
@@ -125,12 +126,12 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.6 }}
           className="lg:col-span-5 w-full max-w-md mx-auto"
         >
-          <div className="glass-card rounded-[2.5rem] p-6 sm:p-8 border border-white/25 shadow-2xl relative overflow-hidden glass-shimmer">
-            <h3 className="text-2xl font-bold font-playfair text-[#2B2B2B] text-center mb-6">Plan Your Stay</h3>
+          <div className="bg-white/95 backdrop-blur-md rounded-[2.5rem] p-6 sm:p-8 border border-white/40 shadow-2xl relative overflow-hidden">
+            <h2 className="text-2xl font-bold font-playfair text-[#2B2B2B] text-center mb-6">Plan Your Stay</h2>
             
             <div className="space-y-4">
               <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-[#2B2B2B]/70 font-poppins mb-1.5">Check-In Date</label>
+                <label className="block text-xs font-semibold uppercase tracking-wider text-[#2B2B2B]/85 font-poppins mb-1.5">Check-In Date</label>
                 <div className="relative">
                   <Calendar className="absolute left-4 top-1/2 -translate-y-1/2 text-primary w-4 h-4" />
                   <input
@@ -146,7 +147,7 @@ export default function Hero() {
               </div>
 
               <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-[#2B2B2B]/70 font-poppins mb-1.5">Check-Out Date</label>
+                <label className="block text-xs font-semibold uppercase tracking-wider text-[#2B2B2B]/85 font-poppins mb-1.5">Check-Out Date</label>
                 <div className="relative">
                   <Calendar className="absolute left-4 top-1/2 -translate-y-1/2 text-primary w-4 h-4" />
                   <input
@@ -163,7 +164,7 @@ export default function Hero() {
 
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-[#2B2B2B]/70 font-poppins mb-1.5">Guests</label>
+                  <label className="block text-xs font-semibold uppercase tracking-wider text-[#2B2B2B]/85 font-poppins mb-1.5">Guests</label>
                   <button
                     onClick={() => openBooking()}
                     className="w-full px-4 py-3.5 rounded-2xl border border-primary/20 bg-white/60 focus:outline-none font-manrope text-sm text-[#2B2B2B] cursor-pointer text-left appearance-none bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%238B5E3C%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m6%209%206%206%206-6%22%2F%3E%3C%2Fsvg%3E')] bg-[length:1.1rem] bg-[right_1rem_center] bg-no-repeat"
@@ -172,7 +173,7 @@ export default function Hero() {
                   </button>
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-[#2B2B2B]/70 font-poppins mb-1.5">Room Type</label>
+                  <label className="block text-xs font-semibold uppercase tracking-wider text-[#2B2B2B]/85 font-poppins mb-1.5">Room Type</label>
                   <button
                     onClick={() => openBooking()}
                     className="w-full px-4 py-3.5 rounded-2xl border border-primary/20 bg-white/60 focus:outline-none font-manrope text-sm text-[#2B2B2B] cursor-pointer text-left appearance-none bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%238B5E3C%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m6%209%206%206%206-6%22%2F%3E%3C%2Fsvg%3E')] bg-[length:1.1rem] bg-[right_1rem_center] bg-no-repeat truncate pr-8"

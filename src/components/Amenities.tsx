@@ -124,7 +124,7 @@ export default function Amenities() {
                 <h3 className="text-base font-bold font-poppins text-[#2B2B2B] group-hover:text-primary transition-colors mb-1.5">
                   {amenity.title}
                 </h3>
-                <p className="text-xs text-[#2B2B2B]/70 font-manrope leading-relaxed">
+                <p className="text-xs text-[#2B2B2B]/85 font-manrope leading-relaxed">
                   {amenity.desc}
                 </p>
               </motion.div>

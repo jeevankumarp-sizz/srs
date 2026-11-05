@@ -53,10 +53,10 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="flex items-center gap-1.5 mb-1">
-                    <h4 className="text-sm font-semibold font-poppins text-[#2B2B2B] uppercase tracking-wider group-hover:text-primary transition-colors">Our Address</h4>
+                    <h3 className="text-sm font-semibold font-poppins text-[#2B2B2B] uppercase tracking-wider group-hover:text-primary transition-colors">Our Address</h3>
                     <ExternalLink size={12} className="text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
-                  <p className="text-sm text-[#2B2B2B]/75 font-manrope leading-relaxed">
+                  <p className="text-sm text-[#2B2B2B]/90 font-manrope leading-relaxed">
                     Sangam Residency,<br />
                     Behind HP Petrol Bunk,<br />
                     Bangalore–Honnavar Highway,<br />
@@ -74,11 +74,11 @@ export default function Contact() {
                   <Phone size={20} />
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold font-poppins text-[#2B2B2B] uppercase tracking-wider mb-1">Phone Enquiries</h4>
+                  <h3 className="text-sm font-semibold font-poppins text-[#2B2B2B] uppercase tracking-wider mb-1">Phone Enquiries</h3>
                   <a href="tel:+917676393132" className="block text-base font-bold text-primary font-poppins mt-0.5 hover:underline">
                     +91 7676393132
                   </a>
-                  <p className="text-xs text-[#2B2B2B]/60 mt-1 font-manrope">Available 24 Hours for urgent lodging assistance.</p>
+                  <p className="text-xs text-[#2B2B2B]/85 mt-1 font-manrope">Available 24 Hours for urgent lodging assistance.</p>
                 </div>
               </div>
 
@@ -88,11 +88,11 @@ export default function Contact() {
                   <MessageSquare size={20} className="fill-current" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold font-poppins text-[#2B2B2B] uppercase tracking-wider mb-1">WhatsApp Bookings</h4>
+                  <h3 className="text-sm font-semibold font-poppins text-[#2B2B2B] uppercase tracking-wider mb-1">WhatsApp Bookings</h3>
                   <a href="https://wa.me/919164769438" target="_blank" rel="noopener noreferrer" className="block text-base font-bold text-[#25D366] font-poppins mt-0.5 hover:underline">
                     +91 9164769438
                   </a>
-                  <p className="text-xs text-[#2B2B2B]/60 mt-1 font-manrope">Fast replies for availability & custom pricing queries.</p>
+                  <p className="text-xs text-[#2B2B2B]/85 mt-1 font-manrope">Fast replies for availability & custom pricing queries.</p>
                 </div>
               </div>
             </div>

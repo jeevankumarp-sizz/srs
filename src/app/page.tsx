@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -8,8 +9,10 @@ import Reviews from "@/components/Reviews";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import BookingModal from "@/components/BookingModal";
-import FloatingCTA from "@/components/FloatingCTA";
+
+// Defer non-critical client components from the initial critical rendering path
+const BookingModal = dynamic(() => import("@/components/BookingModal"));
+const FloatingCTA = dynamic(() => import("@/components/FloatingCTA"));
 
 export default function Home() {
   return (

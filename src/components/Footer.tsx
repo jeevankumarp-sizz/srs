@@ -38,14 +38,15 @@ export default function Footer() {
                   fill
                   sizes="40px"
                   className="object-cover"
+                  loading="lazy"
                 />
               </div>
               <div>
-                <h4 className="text-xl font-bold font-playfair text-[#2B2B2B] leading-none">Sangam Residency</h4>
+                <h2 className="text-xl font-bold font-playfair text-[#2B2B2B] leading-none">Sangam Residency</h2>
                 <p className="text-[10px] text-primary font-poppins uppercase tracking-wider font-semibold mt-1">Sagara, Karnataka</p>
               </div>
             </div>
-            <p className="text-sm text-[#2B2B2B]/70 italic mt-3 font-manrope">
+            <p className="text-sm text-[#2B2B2B]/85 italic mt-3 font-manrope">
               &quot;A Peaceful Stay for Families and Travellers&quot;
             </p>
             <div className="flex items-center gap-2 text-xs text-forest-accent bg-forest-accent/5 py-1.5 px-3 rounded-full border border-forest-accent/10 w-fit">
@@ -56,7 +57,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h5 className="text-sm font-semibold font-poppins uppercase tracking-wider text-primary mb-4">Explore</h5>
+            <h3 className="text-sm font-semibold font-poppins uppercase tracking-wider text-primary mb-4">Explore</h3>
             <ul className="space-y-2.5">
               {[
                 { name: "About Hotel", id: "about" },
@@ -69,7 +70,7 @@ export default function Footer() {
                 <li key={link.id}>
                   <button
                     onClick={() => handleLinkClick(link.id)}
-                    className="text-sm text-[#2B2B2B]/70 hover:text-primary transition-colors cursor-pointer"
+                    className="text-sm text-[#2B2B2B]/85 hover:text-primary transition-colors cursor-pointer font-medium"
                   >
                     {link.name}
                   </button>
@@ -80,7 +81,7 @@ export default function Footer() {
 
           {/* Contact Details */}
           <div>
-            <h5 className="text-sm font-semibold font-poppins uppercase tracking-wider text-primary mb-4">Get In Touch</h5>
+            <h3 className="text-sm font-semibold font-poppins uppercase tracking-wider text-primary mb-4">Get In Touch</h3>
             <ul className="space-y-3 text-sm text-[#2B2B2B]/80 font-manrope">
               <li className="flex items-start gap-2.5">
                 <MapPin size={16} className="text-primary mt-0.5 shrink-0" />
@@ -108,7 +109,7 @@ export default function Footer() {
 
           {/* Timing & Actions */}
           <div>
-            <h5 className="text-sm font-semibold font-poppins uppercase tracking-wider text-primary mb-4">Operations</h5>
+            <h3 className="text-sm font-semibold font-poppins uppercase tracking-wider text-primary mb-4">Operations</h3>
             <ul className="space-y-3.5 text-sm text-[#2B2B2B]/80 font-manrope">
               <li className="flex items-center gap-2.5">
                 <Clock size={16} className="text-primary shrink-0" />
@@ -126,7 +127,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-[#8B5E3C]/10 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#2B2B2B]/60">
+        <div className="border-t border-[#8B5E3C]/10 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#2B2B2B]/85 font-medium">
           <p>© {new Date().getFullYear()} Sangam Residency. All rights reserved.</p>
           <p className="flex items-center gap-1">
             Made with <Heart size={10} className="text-red-500 fill-current" /> for travelers visiting Sagara & Jog Falls

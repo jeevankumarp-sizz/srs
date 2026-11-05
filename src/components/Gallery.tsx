@@ -141,7 +141,7 @@ export default function Gallery() {
               className={`px-5 py-2.5 rounded-full text-xs font-semibold tracking-wide uppercase transition-all duration-300 cursor-pointer font-poppins border ${
                 filter === cat.value
                   ? "bg-primary text-white border-primary shadow-sm"
-                  : "bg-white/80 hover:bg-primary/5 text-[#2B2B2B]/70 border-[#8B5E3C]/10"
+                  : "bg-white/80 hover:bg-primary/5 text-[#2B2B2B]/85 border-[#8B5E3C]/10 font-semibold"
               }`}
             >
               {cat.label}

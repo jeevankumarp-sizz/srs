@@ -73,7 +73,7 @@ export default function FAQ() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                     >
-                      <div className="px-6 pb-6 pt-1 text-sm sm:text-base text-[#2B2B2B]/75 font-manrope leading-relaxed border-t border-primary/5">
+                      <div className="px-6 pb-6 pt-1 text-sm sm:text-base text-[#2B2B2B]/90 font-manrope leading-relaxed border-t border-primary/5">
                         {faq.answer}
                       </div>
                     </motion.div>
@@ -87,17 +87,17 @@ export default function FAQ() {
         {/* Quick Assistance Banner */}
         <div className="mt-12 p-6 sm:p-8 rounded-3xl bg-secondary/80 border border-primary/15 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
           <div className="space-y-1">
-            <h4 className="text-lg font-bold font-playfair text-[#2B2B2B]">
+            <h3 className="text-lg font-bold font-playfair text-[#2B2B2B]">
               Have a Specific Question or Requirement?
-            </h4>
-            <p className="text-xs sm:text-sm text-[#2B2B2B]/70 font-manrope">
+            </h3>
+            <p className="text-xs sm:text-sm text-[#2B2B2B]/85 font-medium font-manrope">
               Our front desk is active 24/7. Speak with us directly for instant clarification.
             </p>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-3 shrink-0">
             <a
               href="tel:+917676393132"
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white border border-primary/20 text-primary text-xs sm:text-sm font-poppins font-semibold hover:bg-primary/5 transition-all"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white border border-primary/40 text-primary text-xs sm:text-sm font-poppins font-semibold hover:bg-primary/5 transition-all"
             >
               <Phone size={14} />
               <span>Call +91 7676393132</span>

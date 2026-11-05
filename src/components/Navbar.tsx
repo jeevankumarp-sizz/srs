@@ -84,7 +84,7 @@ export default function Navbar() {
                 <span className="block text-lg font-bold font-playfair tracking-tight text-[#2B2B2B] leading-none group-hover:text-primary transition-colors">
                   Sangam Residency
                 </span>
-                <span className="block text-[10px] text-primary/80 font-poppins uppercase tracking-wider font-semibold mt-0.5">
+                <span className="block text-[10px] text-primary font-poppins uppercase tracking-wider font-semibold mt-0.5">
                   Sagara
                 </span>
               </div>
@@ -96,7 +96,7 @@ export default function Navbar() {
                 <button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
-                  className="text-sm font-poppins font-medium text-[#2B2B2B]/80 hover:text-primary cursor-pointer transition-colors relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+                  className="text-sm font-poppins font-semibold text-[#2B2B2B] hover:text-primary cursor-pointer transition-colors relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
                 >
                   {link.name}
                 </button>

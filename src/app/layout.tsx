@@ -123,6 +123,23 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <head>
         <StructuredData />
+        {/* Preload critical LCP Hero Banner image with high priority */}
+        <link
+          rel="preload"
+          as="image"
+          href="/images/home/Home Section.webp"
+          type="image/webp"
+          fetchPriority="high"
+        />
+        {/* Inline minimal critical CSS for above-the-fold paint */}
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+              #hero { background-color: #2B2B2B; min-height: 92vh; }
+              body { background-color: #FCFAF7; color: #2B2B2B; }
+            `,
+          }}
+        />
       </head>
       <body
         className={`${playfair.variable} ${manrope.variable} ${poppins.variable} font-manrope antialiased bg-background text-foreground pb-[76px] md:pb-0`}

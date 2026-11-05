@@ -173,7 +173,7 @@ Please share the room availability and booking details.`;
             <button
               onClick={closeBooking}
               aria-label="Close Booking Modal"
-              className="absolute top-5 right-5 text-[#2B2B2B]/60 hover:text-primary transition-colors p-2 hover:bg-[#F5F1EA] rounded-full"
+              className="absolute top-5 right-5 text-[#2B2B2B]/80 hover:text-primary transition-colors p-2 hover:bg-[#F5F1EA] rounded-full"
             >
               <X size={20} />
             </button>
@@ -181,8 +181,8 @@ Please share the room availability and booking details.`;
             {/* Modal Header */}
             <div className="text-center mb-6">
               <span className="text-primary text-sm font-semibold tracking-wider uppercase font-poppins">Reservation Enquiry</span>
-              <h3 className="text-3xl font-playfair text-[#2B2B2B] mt-1 font-bold">Book Your Stay</h3>
-              <p className="text-sm text-[#2B2B2B]/70 mt-1">
+              <h2 className="text-3xl font-playfair text-[#2B2B2B] mt-1 font-bold">Book Your Stay</h2>
+              <p className="text-sm text-[#2B2B2B]/85 mt-1 font-medium">
                 Fill details below. We will coordinate details and confirmation via WhatsApp.
               </p>
             </div>
@@ -191,7 +191,7 @@ Please share the room availability and booking details.`;
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
               {/* Full Name */}
               <div>
-                <label className="block text-xs font-semibold text-[#2B2B2B]/80 font-poppins uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
+                <label className="block text-xs font-semibold text-[#2B2B2B]/90 font-poppins uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                   <User size={14} className="text-primary" /> Full Name
                 </label>
                 <input
@@ -207,11 +207,11 @@ Please share the room availability and booking details.`;
 
               {/* Phone Number */}
               <div>
-                <label className="block text-xs font-semibold text-[#2B2B2B]/80 font-poppins uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
+                <label className="block text-xs font-semibold text-[#2B2B2B]/90 font-poppins uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                   <Phone size={14} className="text-primary" /> Phone Number
                 </label>
                 <div className="relative">
-                  <span className="absolute left-4 top-1/2 -translate-y-1/2 text-sm text-[#2B2B2B]/60 font-semibold">+91</span>
+                  <span className="absolute left-4 top-1/2 -translate-y-1/2 text-sm text-[#2B2B2B]/80 font-semibold">+91</span>
                   <input
                     type="tel"
                     placeholder="10-digit number"

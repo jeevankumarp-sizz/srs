@@ -53,7 +53,7 @@ function RoomImageCarousel({ images, title }: { images: string[]; title: string 
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className="object-cover"
-            priority={current === 0}
+            loading="lazy"
           />
         </motion.div>
       </AnimatePresence>
@@ -230,12 +230,12 @@ export default function Rooms() {
               </div>
               <div>
                 <span className="block text-sm font-bold text-[#2B2B2B] font-poppins">Extra Bed Facility</span>
-                <span className="block text-xs text-[#2B2B2B]/70 font-manrope">Travelling with additional members? Extra comfortable bed available for any room.</span>
+                <span className="block text-xs text-[#2B2B2B]/85 font-manrope">Travelling with additional members? Extra comfortable bed available for any room.</span>
               </div>
             </div>
             <div className="text-right shrink-0">
               <span className="block text-base font-extrabold text-primary font-manrope">₹299</span>
-              <span className="block text-[11px] text-[#2B2B2B]/60 font-medium">per bed</span>
+              <span className="block text-[11px] text-[#2B2B2B]/80 font-semibold">per bed</span>
             </div>
           </div>
         </div>
@@ -282,10 +282,10 @@ export default function Rooms() {
 
                   <div className="flex items-baseline gap-1.5 mb-4">
                     <span className="text-3xl font-extrabold text-primary font-manrope">{room.price}</span>
-                    <span className="text-xs text-[#2B2B2B]/60 font-medium font-manrope">{room.priceDesc}</span>
+                    <span className="text-xs text-[#2B2B2B]/80 font-semibold font-manrope">{room.priceDesc}</span>
                   </div>
 
-                  <p className="text-sm text-[#2B2B2B]/70 leading-relaxed font-manrope mb-6">
+                  <p className="text-sm text-[#2B2B2B]/85 leading-relaxed font-manrope mb-6">
                     {room.description}
                   </p>
 
@@ -294,7 +294,7 @@ export default function Rooms() {
                     {room.amenities.map((amenity, idx) => {
                       const IconComponent = amenity.icon;
                       return (
-                        <div key={idx} className="flex items-center gap-2.5 text-[#2B2B2B]/75">
+                        <div key={idx} className="flex items-center gap-2.5 text-[#2B2B2B]/90 font-medium">
                           <IconComponent size={16} className="text-accent-gold shrink-0" />
                           <span className="text-xs font-medium font-manrope">{amenity.name}</span>
                         </div>

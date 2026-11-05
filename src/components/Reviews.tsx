@@ -117,7 +117,7 @@ export default function Reviews() {
           <div className="flex items-center justify-center gap-2 mt-4 bg-secondary/80 border border-primary/5 w-fit mx-auto px-4 py-2 rounded-2xl shadow-sm">
             <span className="text-[#2B2B2B] font-bold text-sm font-poppins">⭐ 4.5+ Google Rating</span>
             <span className="text-[#2B2B2B]/40 text-xs">|</span>
-            <span className="text-[#2B2B2B]/70 text-xs font-medium font-manrope">Based on Verified Guest stays</span>
+            <span className="text-[#2B2B2B]/85 text-xs font-semibold font-manrope">Based on Verified Guest stays</span>
           </div>
           <div className="w-12 h-[2px] bg-accent-gold mx-auto mt-6" />
         </div>
@@ -141,8 +141,8 @@ export default function Reviews() {
                       {review.name.charAt(0)}
                     </div>
                     <div>
-                      <h4 className="text-sm font-bold text-[#2B2B2B] font-poppins">{review.name}</h4>
-                      <p className="text-[10px] text-[#2B2B2B]/60 font-medium font-manrope">{review.location} • {review.date}</p>
+                      <h3 className="text-sm font-bold text-[#2B2B2B] font-poppins">{review.name}</h3>
+                      <p className="text-[10px] text-[#2B2B2B]/80 font-semibold font-manrope">{review.location} • {review.date}</p>
                     </div>
                   </div>
 
@@ -150,7 +150,7 @@ export default function Reviews() {
                     {renderStars(review.rating)}
                   </div>
 
-                  <p className="text-xs sm:text-sm text-[#2B2B2B]/85 font-manrope leading-relaxed italic">
+                  <p className="text-xs sm:text-sm text-[#2B2B2B]/90 font-manrope leading-relaxed italic">
                     &quot;{review.text}&quot;
                   </p>
                 </div>
@@ -173,8 +173,8 @@ export default function Reviews() {
                       {review.name.charAt(0)}
                     </div>
                     <div>
-                      <h4 className="text-sm font-bold text-[#2B2B2B] font-poppins">{review.name}</h4>
-                      <p className="text-[10px] text-[#2B2B2B]/60 font-medium font-manrope">{review.location} • {review.date}</p>
+                      <h3 className="text-sm font-bold text-[#2B2B2B] font-poppins">{review.name}</h3>
+                      <p className="text-[10px] text-[#2B2B2B]/80 font-semibold font-manrope">{review.location} • {review.date}</p>
                     </div>
                   </div>
 
@@ -182,7 +182,7 @@ export default function Reviews() {
                     {renderStars(review.rating)}
                   </div>
 
-                  <p className="text-xs sm:text-sm text-[#2B2B2B]/85 font-manrope leading-relaxed italic">
+                  <p className="text-xs sm:text-sm text-[#2B2B2B]/90 font-manrope leading-relaxed italic">
                     &quot;{review.text}&quot;
                   </p>
                 </div>
