@@ -99,8 +99,8 @@ export default function Hero() {
             </button>
 
             <a
-              href="tel:+919164769438"
-              aria-label="Call Sangam Residency front desk at +91 9164769438"
+              href="tel:+917676393132"
+              aria-label="Call Sangam Residency front desk at +91 7676393132"
               data-track="phone-call-hero"
               className="bg-white/10 hover:bg-white/15 backdrop-blur-md border border-white/20 text-white font-poppins font-semibold px-6 py-4 rounded-2xl transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center gap-2"
             >

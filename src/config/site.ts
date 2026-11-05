@@ -32,8 +32,8 @@ export const siteConfig = {
     bestRating: 5,
   },
   contact: {
-    phone: "+919164769438",
-    displayPhone: "+91 9164769438",
+    phone: "+917676393132",
+    displayPhone: "+91 7676393132",
     whatsapp: "919164769438",
     displayWhatsapp: "+91 9164769438",
     whatsappBookingLink: "https://wa.me/919164769438",
@@ -161,7 +161,7 @@ export const siteConfig = {
     },
     {
       question: "How do I book a room at Sangam Residency?",
-      answer: "You can book directly via WhatsApp at +91 9164769438 or by calling our 24/7 reservation desk at +91 9164769438. You can also click the 'Book on WhatsApp' buttons throughout this website to instantly enquire about availability.",
+      answer: "You can book directly via WhatsApp at +91 9164769438 or by calling our 24/7 reservation desk at +91 7676393132. You can also click the 'Book on WhatsApp' buttons throughout this website to instantly enquire about availability.",
     },
     {
       question: "Are there group stay options available for pilgrimages and tours?",
