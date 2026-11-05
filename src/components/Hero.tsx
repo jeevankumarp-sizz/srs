@@ -69,7 +69,7 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-playfair leading-[1.15] text-[#FCFAF7]"
           >
-            Comfortable Stay in the <span className="text-accent-gold">Heart of Sagara</span>
+            Best Hotel in <span className="text-accent-gold">Sagara</span> — Near Jog Falls
           </motion.h1>
 
           <motion.p
@@ -78,7 +78,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-lg sm:text-xl text-[#FCFAF7]/85 font-light max-w-xl mx-auto lg:mx-0 font-manrope leading-relaxed"
           >
-            &quot;A Peaceful Stay for Families and Travellers&quot;
+            Comfortable, hygienic rooms with 24/7 hot water, free Wi-Fi &amp; secured parking — 40 mins from Jog Falls, 55 mins from Sigandur Temple.
           </motion.p>
 
           {/* Quick CTA Actions */}

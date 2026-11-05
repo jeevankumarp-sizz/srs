@@ -38,14 +38,27 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Sangam Residency | Best Hotel in Sagara Karnataka | Near Jog Falls",
+    default: "Sangam Residency Sagara | Hotel Near Jog Falls",
     template: "%s | Sangam Residency Sagara",
   },
-  description: siteConfig.description,
+  description:
+    "Hotel in Sagara near Jog Falls & Sigandur. AC/Non-AC rooms, 24/7 hot water, free Wi-Fi & secured parking. 24-hr check-in. Book direct — best rates.",
   applicationName: siteConfig.name,
   authors: [{ name: siteConfig.name, url: siteConfig.url }],
   creator: siteConfig.name,
   publisher: siteConfig.name,
+  keywords: [
+    "hotel in Sagara",
+    "hotel near Jog Falls",
+    "Sangam Residency Sagara",
+    "accommodation Sagara Karnataka",
+    "hotel near Sigandur Temple",
+    "budget hotel Sagara",
+    "family hotel Sagara",
+    "hotel near Ikkeri",
+    "Sagara Karnataka lodging",
+    "affordable stay near Jog Falls",
+  ],
   formatDetection: {
     telephone: false,
     address: false,
@@ -59,21 +72,23 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: "Sangam Residency | Comfortable Stay in the Heart of Sagara",
-    description: siteConfig.description,
+    title: "Sangam Residency Sagara | Hotel Near Jog Falls & Sigandur",
+    description:
+      "Comfortable, affordable hotel in Sagara, Karnataka. AC & Non-AC rooms, Executive Suite, Dormitory. 24/7 hot water, free parking, free Wi-Fi. Near Jog Falls, Sigandur & Ikkeri.",
     images: [
       {
         url: siteConfig.ogImage,
         width: 1200,
         height: 630,
-        alt: "Sangam Residency Hotel Sagara Exterior View",
+        alt: "Sangam Residency Hotel Exterior View – Sagara, Karnataka",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sangam Residency | Hotel Stay in Sagara Near Jog Falls",
-    description: siteConfig.description,
+    title: "Sangam Residency Sagara | Hotel Near Jog Falls",
+    description:
+      "Comfortable, affordable hotel in Sagara, Karnataka. AC & Non-AC rooms, 24/7 hot water, free parking. Near Jog Falls & Sigandur Temple.",
     images: [siteConfig.ogImage],
   },
   robots: {

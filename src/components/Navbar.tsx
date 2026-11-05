@@ -73,7 +73,7 @@ export default function Navbar() {
               <div className="relative w-10 h-10 rounded-full overflow-hidden border border-primary/20 shadow-sm transition-transform duration-300 group-hover:scale-105">
                 <Image
                   src="/images/logo.jpeg"
-                  alt="Sangam Residency Logo"
+                  alt="Sangam Residency Hotel Logo – Sagara Karnataka"
                   fill
                   sizes="40px"
                   className="object-cover"

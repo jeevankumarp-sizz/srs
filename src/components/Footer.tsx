@@ -34,7 +34,7 @@ export default function Footer() {
               <div className="relative w-10 h-10 rounded-full overflow-hidden border border-primary/20 bg-white">
                 <Image
                   src="/images/logo.jpeg"
-                  alt="Sangam Residency Logo"
+                  alt="Sangam Residency Hotel Logo – Sagara Karnataka"
                   fill
                   sizes="40px"
                   className="object-cover"

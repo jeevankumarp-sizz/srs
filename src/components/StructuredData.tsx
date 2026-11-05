@@ -6,13 +6,18 @@ export default function StructuredData() {
   // 1. Hotel / LodgingBusiness Schema
   const hotelSchema = {
     "@context": "https://schema.org",
-    "@type": "Hotel",
+    "@type": ["Hotel", "LodgingBusiness"],
     "@id": `${baseUrl}/#hotel`,
     name: siteConfig.name,
     legalName: siteConfig.legalName,
     description: siteConfig.description,
     url: baseUrl,
-    logo: `${baseUrl}${siteConfig.logo}`,
+    logo: {
+      "@type": "ImageObject",
+      url: `${baseUrl}${siteConfig.logo}`,
+      width: 200,
+      height: 200,
+    },
     image: [
       `${baseUrl}${siteConfig.ogImage}`,
       `${baseUrl}/images/about.jpg`,
@@ -42,6 +47,11 @@ export default function StructuredData() {
       longitude: siteConfig.geo.longitude,
     },
     hasMap: siteConfig.googleMapsUrl,
+    areaServed: [
+      { "@type": "City", name: "Sagara", containedInPlace: { "@type": "State", name: "Karnataka" } },
+      { "@type": "City", name: "Shimoga" },
+      { "@type": "City", name: "Shivamogga" },
+    ],
     amenityFeature: siteConfig.amenities.map((amenity) => ({
       "@type": "LocationFeatureSpecification",
       name: amenity,
@@ -96,14 +106,15 @@ export default function StructuredData() {
     "@type": "WebPage",
     "@id": `${baseUrl}/#webpage`,
     url: baseUrl,
-    name: `${siteConfig.name} | Best Hotel in Sagara Karnataka | Near Jog Falls`,
+    name: "Sangam Residency Sagara | Hotel Near Jog Falls",
     isPartOf: {
       "@id": `${baseUrl}/#website`,
     },
     about: {
       "@id": `${baseUrl}/#hotel`,
     },
-    description: siteConfig.description,
+    description:
+      "Hotel in Sagara near Jog Falls & Sigandur. AC/Non-AC rooms, 24/7 hot water, free Wi-Fi & secured parking. 24-hr check-in. Book direct — best rates.",
     inLanguage: "en-IN",
     breadcrumb: {
       "@type": "BreadcrumbList",
